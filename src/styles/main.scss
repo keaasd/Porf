@@ -1456,11 +1456,21 @@ li {
   &__text-box {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
+
+    @media (max-width: $r_mob_567) {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
-  // &__two {
-  //   border: solid;
-  // }
+  &__two {
+    text-align: end;
+
+    @media (max-width: $r_mob_567) {
+      text-align: center;
+    }
+  }
 
   &__fon {
     position: relative;
@@ -1500,44 +1510,42 @@ li {
     padding-top: var(--margin-s);
     padding-bottom: var(--margin-s);
     border-bottom: $border;
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-left: 6%;
+    padding-right: 6%;
 
-    @media (max-width: $r_mob_567) {
-      // flex-direction: column;
+    @media (max-width: $r_tab ) {
+      padding-left: 13%;
+      padding-right: 13%;
     }
   }
 
   &__subtitle {
     opacity: 0.8;
-    margin-top: var(--margin-mini);
   }
 
   &__descript {
     font-size: 16px;
     line-height: 150%;
     opacity: 0.8;
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
 
     @media (max-width: $r_mob_567) {
       font-size: 12px;
     }
   }
 
+  &__one {
+    margin-right: 30px;
+    width: 100%;
+  }
+
   &__image {
-    // height: 430px;
-    // width: 810px;
-    // padding: 10px 93px 46px;
-    // background-image: url(../images/macbook.svg);
     background-size: cover;
     background-repeat: no-repeat;
     box-sizing: border-box;
     position: relative;
 
-    @media (max-width: $r_mob_567) {
-      margin-left: 0;
-      margin-top: 30px;
-    }
+    @media (max-width: $r_mob_567) {}
 
     &_moby {
       background-image: url(../images/iphoneblur.svg);
@@ -1551,6 +1559,14 @@ li {
       background-repeat: no-repeat;
     }
   }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #d40000;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 30px;
 }
 
 .seo {
