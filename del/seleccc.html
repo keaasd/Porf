@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="form" action="#">
+        <label> уттут
+
+            <input type="text" name="gggg" id="">
+        </label>
+        <button type="submit"></button>
+    </form>
+    <script>
+
+        'use strict'
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('form');
+            form.addEventListener('submit', formSend)
+
+
+        });
+
+        //отключаем стандартное поведение кнопки
+        async function formSend(e) {
+            e.preventDefault();
+            // валидация
+            let error = formValidate(form);
+            let formData = new formData(form);
+            formData.append('image', formImage.files[0]);
+
+            if (error === 0) {
+                // сделаем фон, чтобы показать что идет отправка
+                form.classList.add('_sending');
+                let response = await fetch('sendmail.php', {
+                    method: 'POST',
+                    body: formData
+                });
+                if (response.ok) {
+                    let result = await response.json();
+                    alert(result.message);
+                    formPreview.innerHTML = ' ';
+                    form.reset();
+                    form.classList.remove('_sending');
+                } else {
+                    alert("Ошибка");
+                    form.classList.remove('_sending');
+                }
+            } else {
+                alert('заполните обязательные поля')
+            }
+        }
+
+
+        function formValidate(form) {
+            let error = 0;
+            let formReq = document.querySelectorAll('._req');
+
+            for (let index = 0; index < formReq.length; index++) {
+                const input = formReq[index];
+                formRemoveError(input);
+
+                if (emailTest(input)) {
+                    formAddError(input);
+                    error++;
+                } else if (input.getAttribute("type") === "checkbox" && input.checked === false) {
+                    error++;
+
+                } else {
+                    if (input.value === '') {
+                        formAddError(input);
+                        error++;
+                    }
+
+                }
+            }
+            return error;
+            function formAddError(input) {
+                input.parentElement.classList.add('_error');
+                input.classList.add('_error');
+            }
+            function formRemoveError(input) {
+                input.parentElement.classList.remove('_error');
+                input.classList.remove('_error');
+            }
+            function emailTest(input) {
+                return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+            }
+            // получ инпут файл 
+            const formImage = document.terElementById('formImage');
+            // получ див для превью
+            const formPreview = document.terElementById('formPreview');
+        }
+
+    </script>
+    <!-- 37^27 -->
+    <!-- https://www.youtube.com/watch?v=PqTrhfjLQBI -->
+</body>
+
+</html>

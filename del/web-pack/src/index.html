@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webpack</title>
+</head>
+<body>
+    <h1>course</h1>
+    <pre>
+
+        Если у кого то в index.html скрипты будет кидать в конец head а не body, пропишите после template: './src/index.html' строчку inject: 'body'
+        Проблема с дублированием файлов (png, fonts).
+        Вместо use: 'file-loader' используйте type: 'asset/resource' - это нововведение (относительное) Webpack, которое помогает избежать данной ошибки. Подробнее можно узнать в документации Webpack в разделе asset-modules, там все кристально объяснено.
+    </pre>
+    
+</body>
+</html>

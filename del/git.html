@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub</title>
+</head>
+<body>
+    <a href="https://medium.com/nuances-of-programming/%D0%B7%D0%BD%D0%B0%D0%BA%D0%BE%D0%BC%D1%81%D1%82%D0%B2%D0%BE-%D1%81-git-%D0%B8-github-%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE-%D0%B4%D0%BB%D1%8F-%D0%BD%D0%B0%D1%87%D0%B8%D0%BD%D0%B0%D1%8E%D1%89%D0%B8%D1%85-9090c4c07f87">ccылка</a>
+<a href="https://education.github.com/git-cheat-sheet-education.pdf?source=post_page---------------------------" target="_blank" rel="noopener noreferrer">инфо</a>
+    
+<pre>git help</pre>
+<pre>git diff
+    diff of what is changed but not staged
+    diff того, что изменено, но не поставлено
+</pre>
+<pre>
+    git checkout -b develop  -        создай и перейди на новую ветку с именем
+    git checkout master -             перейди в главную ветку
+    git merge new-vetka  -            сольёт в активную (данную) ветку
+    git branch -d new-vetka -         удали ветку с именем (на сервере удалять в ручную)
+
+
+    git branch  - покажи все ветки
+
+    git branch develop - создай новую ветку с именем
+    git checkout develop - перейди в ветку с именем
+-------- 
+    git add . добавить измененные файлы
+    git commit - m "сообщение"
+    git push 
+    
+    git log - покажи коммиты
+    
+    
+    
+    git checkout -b feature  - (фича, баг или )
+</pre>
+    <p id="6059" class="pw-post-body-paragraph jx jy ja jz b ka kb kc kd ke kf kg kh ki kj kk kl km kn ko kp kq kr ks kt ku it gc" data-selectable-paragraph="">Единственная ветка, которая может изменять проект, — это <code class="fr na nb nc nd b">master</code>. Если вы не хотите вносить изменения сразу, то выделите их отдельной веткой, а затем сливайте с <code class="fr na nb nc nd b">master</code>.</p>
+    <pre class="ma mb mc md gz ne bt nf"><span id="d0cc" class="gc ml kx ja nd b do ng nh l ni" data-selectable-paragraph="">git merge new_feature</span></pre>
+    <p id="340d" class="pw-post-body-paragraph jx jy ja jz b ka kb kc kd ke kf kg kh ki kj kk kl km kn ko kp kq kr ks kt ku it gc" data-selectable-paragraph="">Эта команда берет все изменения в ветке <code class="fr na nb nc nd b">new_feature</code> и добавляет их в ветку <code class="fr na nb nc nd b">master</code>.</p>
+    <p id="ab44" class="pw-post-body-paragraph jx jy ja jz b ka kb kc kd ke kf kg kh ki kj kk kl km kn ko kp kq kr ks kt ku it gc" data-selectable-paragraph="">Вы можете отправить изменения в репозиторий и установить удаленную ветку (например, <code class="fr na nb nc nd b">new_feature</code>) в качестве «отслеживаемой»:</p>
+    <pre class="ma mb mc md gz ne bt nf"><span id="a293" class="gc ml kx ja nd b do ng nh l ni" data-selectable-paragraph="">git push — set-upstream origin new_feature</span></pre>
+    <p id="55d1" class="pw-post-body-paragraph jx jy ja jz b ka kb kc kd ke kf kg kh ki kj kk kl km kn ko kp kq kr ks kt ku it gc" data-selectable-paragraph="">Допустим, вы внесли какие-то изменения. Эти изменения вас устраивают, и вы хотите создать запрос на принятие изменений (<strong class="jz mz">Pull request</strong>). В Pull request ваши коллеги смогут проверить внесенные изменения и обсудить их. Pull request можно создавать по любому поводу, будь то внесение конечных изменений или просьба о помощи в решении какой-либо проблемы.</p>
+    <p id="5a03" class="pw-post-body-paragraph jx jy ja jz b ka kb kc kd ke kf kg kh ki kj kk kl km kn ko kp kq kr ks kt ku it gc" data-selectable-paragraph="">Если вы работаете в отдельной ветке, то изменения затронут только ее.</p>
+    <p id="86b9" class="pw-post-body-paragraph jx jy ja jz b ka kb kc kd ke kf kg kh ki kj kk kl km kn ko kp kq kr ks kt ku it gc" data-selectable-paragraph="">Если вас устраивают внесенные изменения вы и хотите слить их с основной веткой, создайте Pull request. При коллективной работе вы можете предложить свои изменения через Pull request и попросить проверить их или слить их с нужными ветками.</p>
+    <p id="80e5" class="pw-post-body-paragraph jx jy ja jz b ka kb kc kd ke kf kg kh ki kj kk kl km kn ko kp kq kr ks kt ku it gc" data-selectable-paragraph="">Pull request можно открыть сразу при создании коммита, даже если вы все еще работаете с кодом. Делается это с сайта GitHub. Допустим, вы внесли изменения в ветку и хотите слить их с <code class="fr na nb nc nd b">master</code>. Тогда:</p>
+    <ul class=""><li id="61b1" class="nn no ja jz b ka kb ke kf ki np km nq kq nr ku ns nt nu nv gc" data-selectable-paragraph="">Кликните по вкладке <strong class="jz mz">Pull request</strong> вверху экрана.</li><li id="bbcf" class="nn no ja jz b ka nw ke nx ki ny km nz kq oa ku ns nt nu nv gc" data-selectable-paragraph="">Нажмите зеленую кнопку <strong class="jz mz">New pull request</strong>.</li><li id="8509" class="nn no ja jz b ka nw ke nx ki ny km nz kq oa ku ns nt nu nv gc" data-selectable-paragraph="">Перейдите в поле<strong class="jz mz"> Example Comparisons</strong>. Выберите ветку, которую хотите сравнить с <code class="fr na nb nc nd b">master</code>.</li><li id="6d9b" class="nn no ja jz b ka nw ke nx ki ny km nz kq oa ku ns nt nu nv gc" data-selectable-paragraph="">Еще раз просмотрите все изменения, убедитесь, что они готовы для коммита.</li><li id="f3ff" class="nn no ja jz b ka nw ke nx ki ny km nz kq oa ku ns nt nu nv gc" data-selectable-paragraph="">Нажмите большую зеленую кнопку <strong class="jz mz">New</strong> <strong class="jz mz">pull request</strong>. Напишите заголовок запроса, дайте краткое описание изменений. Нажмите <strong class="jz mz">Create pull request</strong>.</li></ul>
+    <h2 id="4283" class="ml kx ja bn ky mm mn mo lc mp mq mr lg ki ms mt lk km mu mv lo kq mw mx ls my gc" data-selectable-paragraph=""><strong class="ba">Обновление и слияние</strong></h2>
+    <p id="ff90" class="pw-post-body-paragraph jx jy ja jz b ka lu kc kd ke lv kg kh ki lw kk kl km lx ko kp kq ly ks kt ku it gc" data-selectable-paragraph="">Если вы хотите работать с самой свежей версией репозитория на локальном компьютере, то можно получать изменения с GitHub через <code class="fr na nb nc nd b">git pull</code>. Для обновления локального репозитория до последнего коммита выполните в рабочей директории следующую команду:</p>
+    git pull
+    <p>Если вы хотите работать с самой свежей версией репозитория на локальном компьютере, то можно получать изменения с GitHub через git pull        
+    </p>
+    <p>Для слияния какой-то ветки с вашей активной веткой воспользуйтесь:</p>
+<pre>
+
+    git merge ==имя_ветки==
+<p>Git старается автоматически сливать изменения, однако это не всегда возможно. Иногда возникают конфликты слияния. Если такое произошло, то необходимо разрешить конфликт слияния вручную. После внесения нужных изменений отметьте их в качестве «объединенных» или «слитых» через git add ==имя_файла==. Просмотреть изменения до слияния можно по команде:</p>
+git diff ==исходная_ветка== ==целевая_ветка ==
+<p>Перейти к ветке master можно через:</p>
+git checkout master
+<p>После слияния последних изменений обязательно удалите эту ветку через команду:</p>
+git branch -d new_feature
+
+
+<p>Другие пользователи не увидят вашу ветку, пока она не будет отправлена на удаленный репозиторий. Для отправки ветки в репозиторий выполните следующую команду:</p>
+
+git push origin ==ветка==
+</pre>
+
+</body>
+</html>

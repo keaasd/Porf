@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .button-up {
+    position: fixed;
+    /* background-image: url(../img/icons/Arrow.svg); */
+    width: 52px;
+    height: 55px;
+    cursor: pointer;    
+    border: none;
+    text-decoration: none;
+    bottom: 20px;
+    right: 20px;
+    transform: rotate(180deg);
+    transition: 0.2s;
+}
+.button-up.hidden {
+    opacity: 0;
+}
+.button-up.visible {
+    opacity: 1;
+}
+    </style>
+    <button href="#headerTop" class="button-up hidden" id="btnUp">&#10140;</button>
+    <script>
+    
+
+window.onscroll = function(){scrollFunction()};
+
+const upbuttons = document.querySelectorAll(".button-up");
+
+for (const upbutton of upbuttons) {
+    upbutton.addEventListener("click", clickHandler);
+}
+
+function clickHandler(e) {
+    e.preventDefault();
+    const href = this.getAttribute("href");
+
+document.querySelector(href).scrollIntoView({
+    behavior: "smooth"
+});
+}
+    // Button Up
+function scrollFunction(){
+    if ( document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000){
+        document.getElementById('btnUp').className = 'button-up visible';
+    } else {
+        document.getElementById('btnUp').className = 'button-up hidden';
+    }
+}
+
+    </script>
+</body>
+</html>

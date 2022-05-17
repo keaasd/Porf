@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+        там надо сделать прозрачную подложку и отслеживать клик на нее
+        <style>
+
+        
+            body {
+      font-family: sans-serif;
+    }
+    
+    .wrapper {
+      width: 300px;
+      margin: 50px auto;
+    }
+    
+    .select {
+        width: 100%;
+        position: relative;
+        &._open {
+            .select__dropdown {
+                display: block;
+            }
+    
+            .select__input {
+                border-bottom: none;
+            }
+    
+            .select__icon {
+                transform: rotate(-180deg);
+            }
+    
+            .select__backdrop {
+                display: block;
+            }
+        }
+    
+        &__body {
+            position: relative;
+            z-index: 5;
+        }
+    
+        &__value {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1rem;
+            cursor: pointer;
+        }
+    
+        &__icon {
+            transition: transform .2s;
+        width: 20px;
+        img {
+          max-width: 100%;
+        }
+        }
+    
+        &__dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            max-height: 200px;
+            overflow-y: auto;
+            box-shadow: 2px 3px 5px rgb(0 0 0 / 30%);
+        }
+    
+        &__item {
+            padding: 1rem;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+            transition: background-color .2s;
+    
+            &._selected {
+                background-color: bisque;
+            }
+    
+            @media (any-hover: hover) {
+                &:hover{
+                    background-color: #eee;
+                }
+            }
+        }
+    }
+        </style>
+    </pre>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .wrapper {
+            width: 300px;
+            margin: 50px auto;
+        }
+
+        .select {
+            width: 100%;
+            position: relative;
+
+        }
+
+        .select._open .select__dropdown {
+            display: block;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .select__input {
+            border-bottom: none;
+        }
+
+        .select__backdrop {
+            display: block;
+        }
+
+        .select__body {
+            position: relative;
+            z-index: 5;
+        }
+
+        .select__value {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1rem;
+            cursor: pointer;
+        }
+
+        .select__icon {
+            transition: transform .2s;
+            width: 20px;
+
+        }
+
+        .select__dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            max-height: 200px;
+            overflow-y: auto;
+            box-shadow: 2px 3px 5px rgb(0 0 0 / 30%);
+        }
+
+        .select__icon img {
+            max-width: 100%;
+        }
+
+        .select__item {
+            padding: 1rem;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+            transition: background-color .2s;
+        }
+
+        .select__item._selected {
+            background-color: bisque;
+        }
+
+        .select__item:hover {
+            background-color: #eee;
+        }
+
+        .select._open .select__icon {
+            transform: rotate(-180deg);
+        }
+    </style>
+    <div class="wrapper">
+        <div class="select">
+            <div class="select__value">
+                <span>Текст</span>
+                <div class="select__icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/32/32195.png" alt="">
+                </div>
+            </div>
+            <div class="select__dropdown">
+                <ul class="select__list">
+                    <li class="select__item">Ссылка 1</li>
+                    <li class="select__item">Ссылка 2</li>
+                    <li class="select__item">Ссылка 3</li>
+                    <li class="select__item">Ссылка 4</li>
+                    <li class="select__item">Ссылка 5</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <input type="text">
+
+    <script>
+        const select = document.querySelector('.select');
+
+        select.addEventListener('click', e => {
+            if (e.target.closest('.select__value')) {
+                e.target.closest('.select').classList.toggle('_open')
+            }
+
+            if (e.target.closest('.select__item')) {
+                e.target.closest('.select').querySelector('.select__value span').textContent = e.target.closest('.select__item').textContent;
+                e.target.closest('.select').classList.remove('_open')
+                document.querySelector('input').value = e.target.closest('.select').querySelector('.select__value span').textContent;
+            }
+        })
+    </script>
+</body>
+
+</html>

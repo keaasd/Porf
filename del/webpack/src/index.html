@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>My portfolio</title>
+</head>
+
+<body class="black_th" id="headerTop">
+  <!-- бургер-кнопка -->
+  <header class="header">
+    <div class="header__inner">
+      <nav class="navigation">
+        <ul class="nav__list">
+          <li class="nav_items"><a class="header__nav_link links" href="#about">Обо&nbsp;мне</a></li>
+          <li class="nav_items"><a class="header__nav_link links" href="#portf">Портфолио</a></li>
+          <li class="nav_items"><a class="header__nav_link links" href="#stages">Этапы&nbsp;работ</a></li>
+          <li class="nav_items"><a class="header__nav_link links" href="#rates">Цены</a></li>
+          <li class="nav_items"><a class="header__nav_link links" href="#yourpr">Обратная&nbsp;связь</a></li>
+        </ul>
+      </nav>
+      <div class="header__contact">
+        <div class="header__contact-box ">
+          <a class="header__nav_link nav_tel links" href="tel:+79293398016">8&nbsp;929&nbsp;339&#8209;80&#8209;16</a>
+          <a class="header__nav_link nav_mail links" href="mailto:kea-asd@yandex.ru">kea&#8209;asd@yandex.ru</a>
+          <div class="header__btn-flex"> <button type="button" class="burger-btn__open"></button>
+            <input type="checkbox" class="checkbox theme" id="box" /> <label for="box"></label>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+
+  <main>
+    <div class="container">
+      <div class="bg">
+        <img src="images/foto.jpg" alt="foto">
+      </div>
+      <section class="special">
+        <span class="main__subtitle main__subtitle_bottom">Евгений Коротин</span>
+        <h1 class="title title__highlight">web-разработчик</h1>
+        <div class="special__discuss">
+          <button type="button" class="description description__link _modal-open"
+            data-modal-open="modal-1">Обсудить&nbsp;проект</button>
+          <ul class="special__social-list">
+            <li class="special__items"><a href="" class="special__link links vk">Vk</a></li>
+            <li class="special__items"><a href="" class="special__link links in">Instagram</a></li>
+            <li class="special__items"><a href="" class="special__link links lind">Linkedin</a></li>
+          </ul>
+        </div>
+        <ul class="skills">
+          <li class="skills__ltems">
+            <h3 class="skills__subtitle subtitle">FRONT-END</h3>
+            <p class="skills__text descript">HTML+CSS+JS кодирование дизайнов любой сложности</p>
+          </li>
+          <li class="skills__ltems">
+            <h3 class="skills__subtitle subtitle">Back-end</h3>
+            <p class="skills__text descript">Разработка сложной back-end логики для готового front-end</p>
+          </li>
+          <li class="skills__ltems">
+            <h3 class="skills__subtitle subtitle">WORDPRESS</h3>
+            <p class="skills__text descript">Разработка сайтов - от блога до&nbsp;интернет магазина</p>
+          </li>
+          <li class="skills__ltems">
+            <h3 class="skills__subtitle subtitle">SEO продвижение</h3>
+            <p class="skills__text descript">Качественное улучшение позиций сайта в&nbsp;поисковой выдаче</p>
+          </li>
+        </ul>
+
+      </section>
+      <section class="about">
+        <div class="about__wrap">
+          <h3 class="main__subtitle about__subtitle" id="about">Обо&nbsp;мне</h3>
+          <p class="main__subtitle about__text">Создаю только эффективные решения, которые работают на&nbsp;результат:
+            от&nbsp;одностраничных сайтов, до&nbsp;крупных интернет-порталов.</p>
+        </div>
+        <ul class="about__content">
+          <li class="about__item">
+            <h3 class="subtitle about__subtitle_text">Контроль</h3>
+            <p class="descript about__descript">Предоставление результатов на&nbsp;каждом этапе работы
+              с&nbsp;возможностью
+              внести правки</p>
+          </li>
+          <li class="about__item">
+            <h3 class="subtitle about__subtitle_text">Ответственность</h3>
+            <p class="descript about__descript">Фриланс как основная деятельность, что означает полную отдачу
+              в&nbsp;процессе
+              работы над заказом</p>
+          </li>
+          <li class="about__item">
+            <h3 class="subtitle about__subtitle_text">Исполнительность</h3>
+            <p class="descript about__descript">Внимательность ко&nbsp;всем требованиям заказчика и&nbsp;прояснение
+              любых
+              моментов</p>
+          </li>
+          <li class="about__item">
+            <h3 class="subtitle about__subtitle_text">Качество</h3>
+            <p class="descript about__descript">Высокое качество как графических материалов, так и&nbsp;внутренних
+              алгоритмов
+              работы сайта</p>
+          </li>
+        </ul>
+        <ul class="stages" id="stages">
+          <li class="stages__flex">
+            <p class="stages__text"><span class="stages__num">01</span>Вы заказываете сайт</p>
+            <p class="stages__descript">Связываетесь со&nbsp;мной по&nbsp;телефону или через заявку на&nbsp;сайте</p>
+          </li>
+          <li class="stages__flex">
+            <p class="stages__text"><span class="stages__num">02</span>Обговариваем детали</p>
+            <p class="stages__descript">Созваниваемся или списываемся любым удобным для вас способом</p>
+          </li>
+          <li class="stages__flex">
+            <p class="stages__text"><span class="stages__num">03</span>Этап программирования</p>
+            <p class="stages__descript">Верстаю сайт по&nbsp;вашему проекту пиксель в&nbsp;пиксель</p>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+    <section class="portfolio">
+      <div class="container">
+        <h1 class="title title__highlight portfolio_title" id="portf">Портфолио</h1>
+      </div>
+      <div class="portfolio__fon">
+        <div class="container">
+          <ul class="portfolio__list">
+            <li class="portfolio__item">
+              <div class="portfolio__inner">
+                <h3 class="main__subtitle portfolio__subtitle">Salon Fitness GYM</h3>
+                <ul class="portfolio__text-box">
+                  <li class="portfolio__descript">– верстка по&nbsp;макету из&nbsp;Figma</li>
+                  <li class="portfolio__descript">– наполнение сайта контентом</li>
+                  <!-- <li class="portfolio__descript">– внедрена функция добавления видео</li> -->
+                </ul>
+                <p class="subtitle portfolio__subtitle">Затрачено времени: 5 рабочих дней</p>
+              </div>
+              <a href="https://keaasd.github.io/Module01-Gym/index.html" target="_blank" class="portfolio__image">
+                <img src="./images/mwork1.jpg" alt="">
+              </a>
+            </li>
+
+            <li class="portfolio__item">
+              <div class="portfolio__inner">
+                <h3 class="main__subtitle portfolio__subtitle">Healthly Food</h3>
+                <ul class="portfolio__text-box">
+                  <li class="portfolio__descript">– верстка по&nbsp;макету из&nbsp;PSD</li>
+                  <li class="portfolio__descript">– доступен функционал получения заказов</li>
+                  <li class="portfolio__descript">– реализована кнопка «Заказать в&nbsp;1&nbsp;клик»</li>
+                </ul>
+                <p class="subtitle portfolio__subtitle">Затрачено времени: 7 рабочих дней</p>
+              </div>
+              <a href="https://keaasd.github.io/module02-Shop/dist/" target="_blank" class="portfolio__image">
+                <img src="./images/mwork2.jpg" alt="">
+              </a>
+            </li>
+          </ul>
+
+          <div class="seo">
+            <p class="main__subtitle seo__subtitle">Помимо создания сайтов и&nbsp;посадочных страниц я&nbsp;занимаюсь:
+              настройкой контекстной рекламы в&nbsp;системах Яндекс.Директ и&nbsp;Google AdWords, а&nbsp;так&nbsp;же
+              поисковым продвижением сайтов</p>
+          </div>
+          <div class="advantage">
+            <div class="advantage__item">
+              <div class="advantage__image advantage__image_price">
+                <!-- <img src="images/1_price.svg" alt=""> -->
+
+                <svg width="30" height="30" viewbox="0 0 30 30" fill="none">
+                  <path d="M25.3125 3.75H0.9375V22.5H25.3125V3.75ZM23.4375 20.625H2.8125V5.625H23.4375V20.625Z" />
+                  <path d="M27.1875 8.4375V24.375H5.625V26.25H29.0625V8.4375H27.1875Z" />
+                  <path
+                    d="M13.125 17.7222C15.4512 17.7222 17.3438 15.6634 17.3438 13.1328C17.3438 10.6022 15.4512 8.5434 13.125 8.5434C10.7988 8.5434 8.90625 10.6021 8.90625 13.1328C8.90625 15.6635 10.7988 17.7222 13.125 17.7222ZM13.125 10.4184C14.4173 10.4184 15.4688 11.6361 15.4688 13.1328C15.4688 14.6295 14.4173 15.8472 13.125 15.8472C11.8327 15.8472 10.7812 14.6295 10.7812 13.1328C10.7812 11.6361 11.8327 10.4184 13.125 10.4184Z" />
+                  <path d="M4.6875 7.96875H6.5625V18.2812H4.6875V7.96875Z" />
+                  <path d="M19.6875 7.96875H21.5625V18.2812H19.6875V7.96875Z" />
+                </svg>
+
+
+
+              </div>
+              <div class="advantage__box">
+                <h3 class="advantage__title">Актуальные цены</h3>
+                <p class="advantage__description">Ничего лишнего, без переплат, 100%&nbsp;отработка ваших денег</p>
+              </div>
+            </div>
+            <div class="advantage__item">
+              <div class="advantage__image advantage__image_opyt">
+                <!-- <img src="images/2_opyt.svg" alt=""> -->
+
+                <svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M19.6875 4.21875V2.34375H2.34375V27.6562H27.6562V10.7812H25.7812V12.2859L21.9862 8.49082L17.9297 12.5474L12.0703 6.68801L4.21875 14.5396V4.21875H19.6875ZM21.9862 11.1425L25.7812 14.9376V20.3989L19.2555 13.8732L21.9862 11.1425ZM12.0703 9.33984L25.7812 23.0508V25.7812H4.21875V17.1914L12.0703 9.33984Z" />
+                  <path
+                    d="M26.25 0.9375H24.375V3.75H21.5625V5.625H24.375V8.4375H26.25V5.625H29.0625V3.75H26.25V0.9375Z" />
+                </svg>
+              </div>
+              <div class="advantage__box">
+                <h3 class="advantage__title">Более 2-х&nbsp;лет опыта</h3>
+                <p class="advantage__description">Это моя основная деятельность, создано более 150+ сайтов</p>
+              </div>
+            </div>
+            <div class="advantage__item">
+              <div class="advantage__image advantage__image_time">
+                <!-- <img src="images/3_time.svg" alt=""> -->
+                <svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_13_528)">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9656 1.91063C15.6443 1.8869 15.3222 1.87502 15 1.875V0C15.3685 0.000179677 15.7369 0.013939 16.1044 0.04125L15.9656 1.91063ZM19.7231 2.75437C19.1221 2.52245 18.5048 2.33506 17.8763 2.19375L18.2869 0.36375C19.005 0.525 19.7119 0.73875 20.3981 1.005L19.7231 2.75437ZM22.2919 4.08562C22.0238 3.90684 21.7492 3.73798 21.4687 3.57938L22.3931 1.94813C23.0342 2.31138 23.6477 2.72123 24.2287 3.17437L23.0756 4.65375C22.8214 4.45543 22.56 4.26655 22.2919 4.0875V4.08562ZM25.7306 7.44187C25.3597 6.91495 24.9505 6.4161 24.5062 5.94938L25.8637 4.65562C26.37 5.19 26.8387 5.76187 27.2644 6.36187L25.7306 7.44187ZM27.1256 9.97688C27.0026 9.67961 26.8687 9.38692 26.7244 9.09938L28.3987 8.25562C28.7299 8.91391 29.0119 9.59577 29.2425 10.2956L27.4612 10.8825C27.3605 10.5766 27.2485 10.2745 27.1256 9.97688ZM28.1194 14.6775C28.1042 14.0331 28.0415 13.3908 27.9319 12.7556L29.7787 12.4369C29.9044 13.1606 29.9775 13.8956 29.9962 14.6306L28.1212 14.6775H28.1194ZM27.8737 17.5613C27.9356 17.2425 27.9862 16.9256 28.0256 16.605L29.8875 16.8356C29.7974 17.5672 29.6533 18.291 29.4562 19.0012L27.6487 18.5006C27.735 18.1912 27.81 17.8781 27.8737 17.5613ZM26.0887 22.0219C26.4337 21.4781 26.7375 20.9081 27 20.3194L28.7137 21.0787C28.4137 21.7537 28.0669 22.4025 27.6731 23.025L26.0887 22.0219ZM24.2812 24.2812C24.51 24.0525 24.7294 23.8162 24.9375 23.5725L26.3587 24.7969C26.1181 25.0759 25.8673 25.3461 25.6069 25.6069L24.2812 24.2812Z" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9999 1.875C12.8415 1.87516 10.7165 2.40759 8.81308 3.42514C6.90965 4.44268 5.28652 5.91394 4.08748 7.70859C2.88844 9.50325 2.15049 11.5659 1.93899 13.7139C1.72749 15.8618 2.04897 18.0288 2.87496 20.0228C3.70094 22.0169 5.00594 23.7765 6.67436 25.1457C8.34278 26.515 10.3231 27.4516 12.44 27.8728C14.5569 28.2939 16.7449 28.1864 18.8104 27.56C20.8758 26.9335 22.7549 25.8074 24.2811 24.2812L25.6068 25.6069C23.8625 27.3521 21.7147 28.6401 19.3537 29.3569C16.9927 30.0736 14.4913 30.1969 12.0712 29.7159C9.65117 29.2349 7.38711 28.1643 5.47966 26.5992C3.5722 25.034 2.08025 23.0225 1.136 20.7429C0.191751 18.4633 -0.17565 15.986 0.0663521 13.5305C0.308354 11.075 1.15229 8.71706 2.52338 6.66566C3.89447 4.61426 5.75038 2.93271 7.92668 1.77001C10.103 0.607303 12.5325 -0.000653873 14.9999 5.27734e-07V1.875Z" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0625 5.625C14.3111 5.625 14.5496 5.72377 14.7254 5.89959C14.9012 6.0754 15 6.31386 15 6.5625V16.3313L21.09 19.8113C21.2996 19.9377 21.4514 20.1411 21.5131 20.378C21.5747 20.615 21.5412 20.8666 21.4197 21.0791C21.2983 21.2917 21.0985 21.4483 20.8631 21.5155C20.6277 21.5827 20.3754 21.5551 20.16 21.4388L13.5975 17.6888C13.454 17.6068 13.3347 17.4884 13.2518 17.3455C13.1688 17.2025 13.1251 17.0402 13.125 16.875V6.5625C13.125 6.31386 13.2238 6.0754 13.3996 5.89959C13.5754 5.72377 13.8139 5.625 14.0625 5.625Z" />
+                  </g>
+                  <defs>
+                  <clippath id="clip0_13_528">
+                  <rect width="30" height="30"/>
+                  </clippath>
+                  </defs>
+                  </svg>                 
+
+              </div>
+              <div class="advantage__box">
+                <h3 class="advantage__title">Оптимальные сроки</h3>
+                <p class="advantage__description">Создание сайта любой сложности в&nbsp;самые сжатые сроки</p>
+              </div>
+            </div>
+            <div class="advantage__item">
+              <div class="advantage__image advantage__image_phone">
+                <!-- <img src="images/4_phone.svg" alt=""> -->
+                <svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_13_520)">
+                  <path d="M15.9776 21.4384C12.9089 19.6087 10.3489 17.0487 8.51898 13.9798L12.3935 10.1053L4.93515 2.64673L1.80954 5.77211C-0.00709969 7.58875 -0.512929 10.355 0.551372 12.6557C1.97502 15.7337 3.81225 18.5664 6.01181 21.0747C9.16648 24.672 12.9929 27.5026 17.3849 29.4875C19.6353 30.5044 22.3558 29.9773 24.1544 28.1787L27.3106 25.0224L19.8521 17.5639L15.9776 21.4384ZM22.9113 26.9357C21.6259 28.2211 19.696 28.6026 18.1089 27.8853C9.14703 23.8352 4.48196 16.9667 2.14691 11.9178C1.39091 10.2831 1.75483 8.31293 3.05259 7.01517L4.93515 5.13284L9.90737 10.1053L6.33087 13.682L6.6529 14.2616C8.76571 18.0647 11.8927 21.1919 15.696 23.3047L16.2756 23.6267L19.8521 20.0502L24.8245 25.0224L22.9113 26.9357Z" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.1022 10.569C19.0948 9.58963 17.7757 9 16.5 9V7.5C18.2243 7.5 19.9052 8.28537 21.1478 9.4935C22.3934 10.7045 23.25 12.3904 23.25 14.25H21.75C21.75 12.8596 21.1066 11.5455 20.1022 10.569Z" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M22.1647 8.45962C20.5948 6.93338 18.5257 6 16.5 6V4.5C18.9743 4.5 21.4052 5.62912 23.2103 7.38413C25.0184 9.14198 26.25 11.5779 26.25 14.25H24.75C24.75 12.0471 23.7316 9.98302 22.1647 8.45962Z" />
+                  </g>
+                  <defs>
+                  <clippath id="clip0_13_520">
+                  <rect width="30" height="30" />
+                  </clippath>
+                  </defs>
+                  </svg>
+              </div>
+              <div class="advantage__box">
+                <h3 class="advantage__title">Всегда на&nbsp;связи</h3>
+                <p class="advantage__description">Не&nbsp;теряюсь и не&nbsp;проматываю сроки. Подхожу ответственно</p>
+              </div>
+            </div>
+            <div class="advantage__item ">
+              <div class="advantage__image advantage__image_code">
+                <!-- <img src="images/5_code.svg" alt=""> -->
+                <svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.25 3.75H8.75V6.25H6.25V12.5C6.25 13.163 5.98661 13.7989 5.51777 14.2678C5.04893 14.7366 4.41304 15 3.75 15C4.41304 15 5.04893 15.2634 5.51777 15.7322C5.98661 16.2011 6.25 16.837 6.25 17.5V23.75H8.75V26.25H6.25C4.9125 25.9125 3.75 25.125 3.75 23.75V18.75C3.75 18.087 3.48661 17.4511 3.01777 16.9822C2.54893 16.5134 1.91304 16.25 1.25 16.25H0V13.75H1.25C1.91304 13.75 2.54893 13.4866 3.01777 13.0178C3.48661 12.5489 3.75 11.913 3.75 11.25V6.25C3.75 5.58696 4.01339 4.95107 4.48223 4.48223C4.95107 4.01339 5.58696 3.75 6.25 3.75ZM23.75 3.75C24.413 3.75 25.0489 4.01339 25.5178 4.48223C25.9866 4.95107 26.25 5.58696 26.25 6.25V11.25C26.25 11.913 26.5134 12.5489 26.9822 13.0178C27.4511 13.4866 28.087 13.75 28.75 13.75H30V16.25H28.75C28.087 16.25 27.4511 16.5134 26.9822 16.9822C26.5134 17.4511 26.25 18.087 26.25 18.75V23.75C26.25 24.413 25.9866 25.0489 25.5178 25.5178C25.0489 25.9866 24.413 26.25 23.75 26.25H21.25V23.75H23.75V17.5C23.75 16.837 24.0134 16.2011 24.4822 15.7322C24.9511 15.2634 25.587 15 26.25 15C25.587 15 24.9511 14.7366 24.4822 14.2678C24.0134 13.7989 23.75 13.163 23.75 12.5V6.25H21.25V3.75H23.75ZM15 18.75C15.3315 18.75 15.6495 18.8817 15.8839 19.1161C16.1183 19.3505 16.25 19.6685 16.25 20C16.25 20.3315 16.1183 20.6495 15.8839 20.8839C15.6495 21.1183 15.3315 21.25 15 21.25C14.6685 21.25 14.3505 21.1183 14.1161 20.8839C13.8817 20.6495 13.75 20.3315 13.75 20C13.75 19.6685 13.8817 19.3505 14.1161 19.1161C14.3505 18.8817 14.6685 18.75 15 18.75ZM10 18.75C10.3315 18.75 10.6495 18.8817 10.8839 19.1161C11.1183 19.3505 11.25 19.6685 11.25 20C11.25 20.3315 11.1183 20.6495 10.8839 20.8839C10.6495 21.1183 10.3315 21.25 10 21.25C9.66848 21.25 9.35054 21.1183 9.11612 20.8839C8.8817 20.6495 8.75 20.3315 8.75 20C8.75 19.6685 8.8817 19.3505 9.11612 19.1161C9.35054 18.8817 9.66848 18.75 10 18.75ZM20 18.75C20.3315 18.75 20.6495 18.8817 20.8839 19.1161C21.1183 19.3505 21.25 19.6685 21.25 20C21.25 20.3315 21.1183 20.6495 20.8839 20.8839C20.6495 21.1183 20.3315 21.25 20 21.25C19.6685 21.25 19.3505 21.1183 19.1161 20.8839C18.8817 20.6495 18.75 20.3315 18.75 20C18.75 19.6685 18.8817 19.3505 19.1161 19.1161C19.3505 18.8817 19.6685 18.75 20 18.75Z" />
+                  </svg>
+                  
+
+
+              </div>
+              <div class="advantage__box">
+                <h3 class="advantage__title">Чистый код</h3>
+                <p class="advantage__description">HTML код без всего лишнего, плюс адаптив под все устройства</p>
+              </div>
+            </div>
+            <div class="advantage__item ">
+              <div class="advantage__image advantage__image_noproblem">
+                <!-- <img class="advantage__image" src="images/6_noproblem.svg" alt=""> -->
+                <svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.6375 0H3.57422V30H26.4258V5.7883L20.6375 0ZM21.1523 3.00076L23.425 5.27344H21.1523V3.00076ZM24.668 28.2422H5.33203V1.75781H19.3945V7.03125H24.668V28.2422Z" />
+                  <path d="M21.1506 10.6055H8.84766V12.3633H21.1506V10.6055Z" />
+                  <path d="M21.1506 14.1211H8.84766V15.8789H21.1506V14.1211Z" />
+                  <path d="M21.1506 17.6367H8.84766V19.3945H21.1506V17.6367Z" />
+                  <path d="M21.1506 21.1523H8.84766V22.9102H21.1506V21.1523Z" />
+                  </svg>
+                  
+              </div>
+              <div class="advantage__box">
+                <h3 class="advantage__title">Поддержка сайта</h3>
+                <p class="advantage__description">Быстро устраню любую проблему на&nbsp;вашем сайте</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="languages">
+            <div class="languages_imgs">
+              <a class="languages_img" href="https://ru.wikipedia.org/wiki/HTML5" target="_blank"
+                rel="noopener noreferrer">
+                <img src="images/html.svg" alt=""></a>
+              <div class="languages__hint">
+                <h3 class="languages__hint_title">HTML5</h3>
+                <p class="languages__hint_descript">Язык для структурирования и представления содержимого всемирной
+                  паутины</p>
+              </div>
+            </div>
+            <div class="languages_imgs">
+              <a class="languages_img"
+                href="https://ru.wikipedia.org/wiki/CSS#%D0%A3%D1%80%D0%BE%D0%B2%D0%B5%D0%BD%D1%8C_3_(CSS3)"
+                target="_blank" rel="noopener noreferrer">
+                <img src="images/css.svg" alt=""></a>
+              <div class="languages__hint">
+                <h3 class="languages__hint_title">CSS</h3>
+                <p class="languages__hint_descript">Технология описания внешнего вида документа, средство оформления
+                  веб-страниц.</p>
+              </div>
+
+            </div>
+            <div class="languages_imgs">
+              <a class="languages_img" href="https://ru.wikipedia.org/wiki/JavaScript" target="_blank"
+                rel="noopener noreferrer">
+                <img src="images/js.svg" alt=""></a>
+              <div class="languages__hint">
+                <h3 class="languages__hint_title">JavaScript ES6+</h3>
+                <p class="languages__hint_descript">Язык программирования высокого уровня, использующийся для придания
+                  интерактивности веб-страницам</p>
+              </div>
+
+            </div>
+            <div class="languages_imgs">
+              <a class="languages_img" href="#" target="_blank" rel="noopener noreferrer">
+                <img src="images/jquery.svg" alt=""></a>
+              <div class="languages__hint">
+                <h3 class="languages__hint_title">jQuery</h3>
+                <p class="languages__hint_descript">Фреймворк на&nbsp;основе javascript, оптимизированный на удобство,
+                  стабильность и кроссбраузерность</p>
+              </div>
+            </div>
+            <div class="languages_imgs">
+              <a class="languages_img"
+                href="https://ru.wikipedia.org/wiki/Bootstrap_(%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA)"
+                target="_blank" rel="noopener noreferrer">
+                <img src="images/bootstr.svg" alt=""></a>
+              <div class="languages__hint">
+                <h3 class="languages__hint_title">Bootstrap</h3>
+                <p class="languages__hint_descript">Свободный набор инструментов для создания сайтов и веб-приложений
+                </p>
+              </div>
+            </div>
+            <div class="languages_imgs">
+              <a class="languages_img" href="https://ru.wikipedia.org/wiki/PHP" target="_blank"
+                rel="noopener noreferrer">
+                <img src="images/php.svg" alt=""></a>
+              <div class="languages__hint">
+                <h3 class="languages__hint_title">PHP</h3>
+                <p class="languages__hint_descript">Скриптовый язык общего назначения, интенсивно применяемый для
+                  разработки веб-приложений</p>
+              </div>
+            </div>
+            <div class="languages_imgs">
+              <a class="languages_img"
+                href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiK1v3LhbH3AhXaSvEDHQMgBOwQmhN6BAhUEAI&url=https%3A%2F%2Fru.wikipedia.org%2Fwiki%2FVue.js&usg=AOvVaw1kpev_cE2pS3lLFTGZc9Qu"
+                target="_blank" rel="noopener noreferrer">
+                <img src="images/vue.svg" alt=""></a>
+              <div class="languages__hint">
+                <h3 class="languages__hint_title">Vue</h3>
+                <p class="languages__hint_descript">Прогрессивный фреймворк для создания пользовательских интерфейсов
+                </p>
+              </div>
+            </div>
+            <div class="languages_imgs">
+              <a class="languages_img" href="https://ru.wikipedia.org/wiki/WordPress" target="_blank"
+                rel="noopener noreferrer">
+                <img src="images/wpress.svg" alt=""></a>
+              <div class="languages__hint">
+                <h4 class="languages__hint_title">Wordpress</h4>
+                <p class="languages__hint_descript">Конструктор, с&nbsp;помощью которого можно быстро создать свой сайт
+                  и редактировать его содержимое</p>
+              </div>
+            </div>
+          </div>
+          <div class="rates">
+            <div class="about__wrap rates__wrap">
+              <h3 class="main__subtitle about__subtitle rates__subtitle" id="rates">Тарифы</h3>
+              <p class="main__subtitle about__text rates__text">Представленные ниже цены зависят не&nbsp;только от того
+                какой сайт вы хотите. Конечная цена будет озвучена после прочтения Вашего&nbsp;ТЗ</p>
+            </div>
+          </div>
+          <div class="landing-page">
+            <div class="landing-page__flex">
+              <div class="landing-page__inner-one">
+                <h4 class="landing-page__title">Разработка лэндинга или сайт&nbsp;визитки</h4>
+                <p class="landing-page__subtitle">Небольшой сайт состоящий из одной страницы</p>
+                <button type="button" class="description description__link landing-page__description _modal-open"
+                  data-modal-open="modal-1">Обсудить&nbsp;проект</button>
+              </div>
+              <div class="landing-page__inner-two">
+                <div class="landing-page__text">Что входит</div>
+                <ul class="landing-page__list">
+                  <li class="landing-page__item">Сайт на CMS WordPress</li>
+                  <li class="landing-page__item">Одна посадочная страница</li>
+                  <li class="landing-page__item">От 7 дней</li>
+                </ul>
+                <div class="landing-page__price">От 7 000 Р</div>
+              </div>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="landing-page">
+            <div class="landing-page__flex">
+              <div class="landing-page__inner-one">
+                <h4 class="landing-page__title">Разработка корпоративного сайта</h4>
+                <p class="landing-page__subtitle">Небольшой сайт с n-количеством страниц</p>
+                <button type="button" class="description description__link landing-page__description _modal-open"
+                  data-modal-open="modal-1">Обсудить&nbsp;проект</button>
+              </div>
+              <div class="landing-page__inner-two">
+                <div class="landing-page__text">Что входит</div>
+                <ul class="landing-page__list">
+                  <li class="landing-page__item">Сайт на CMS WordPress</li>
+                  <li class="landing-page__item">От 2-10 страниц</li>
+                  <li class="landing-page__item">От 15 дней</li>
+                </ul>
+                <div class="landing-page__price">От 10 000 Р</div>
+              </div>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="landing-page">
+            <div class="landing-page__flex">
+              <div class="landing-page__inner-one">
+                <h4 class="landing-page__title">Разработка интернет-магазина</h4>
+                <p class="landing-page__subtitle">Полноценный каталог вашей продукции</p>
+                <button type="button" class="description description__link landing-page__description _modal-open"
+                  data-modal-open="modal-1">Обсудить&nbsp;проект</button>
+              </div>
+              <div class="landing-page__inner-two">
+                <div class="landing-page__text">Что входит</div>
+                <ul class="landing-page__list">
+                  <li class="landing-page__item">Сайт на CMS WordPress</li>
+                  <li class="landing-page__item">От 2-10 страниц, корзина, карточка&nbsp;товара</li>
+                  <li class="landing-page__item">От 20 дней</li>
+                </ul>
+                <div class="landing-page__price">От 15 000 Р</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- --------  -->
+          <section class="your-project">
+            <div class="about__wrap rates__wrap">
+              <h3 class="about__subtitle title__highlight your-project__subtitle" id="yourpr">Расскажите
+                о&nbsp;своем&nbsp;проекте
+              </h3>
+              <p class="main__subtitle your-project__text ">Воспользуйтесь формой обратной связи, чтобы обсудить ваш
+                проект, заполните все поля, и я свяжусь с&nbsp;вами в&nbsp;ближайшее время</p>
+            </div>
+            <div class="your-project__wrap">
+              <ul class="your-project__social">
+                <li class="special__items"><a href="" class="special__link links vk">Vk</a></li>
+                <li class="special__items"><a href="" class="special__link links in">Instagram</a></li>
+                <li class="special__items"><a href="" class="special__link links lind">Linkedin</a></li>
+              </ul>
+              <div class="your-project__modal">
+                <!-- action="https://jsonplaceholder.typicode.com/posts" -->
+                
+                <!-- <form class="modal__form" action="https://docs.google.com/forms/d/e/1FAIpQLSfpFEMYdno_7PavklWIeEZHaH8SjJlivhFja4ZpQp6_0gOUdQ/viewform?usp=sf_link" method="post"></form> -->
+                <!-- <form class="modal__form" action="sendmail.php" method="post"> -->
+                  <form name="form" class="modal__form" method="get">
+                  <label for="tel" class="modal__label modal_font">Телефон или почта</label>
+                  <input id="tel" name="tel" class="modal__user modal_font" type="text"
+                    placeholder="Введите телефон" required>
+                  <span class="modal__label modal_font">Выберите удобный способ связи</span>
+                  <div class="form-group">
+                    <div class="dropdown">
+                      <div class="dropdown__box">
+                        <button type="button" class="dropdown__button dropdown__button_mb " aria-required="true">Telegram</button>
+                        <span class="dropdown__button_arrow"></span>
+                      </div>
+                      <ul class="dropdown__list">
+                        <li class="dropdown__list-item" data-value="whatsApp">WhatsApp</li>
+                        <li class="dropdown__list-item" data-value="viber">Viber</li>
+                        <li class="dropdown__list-item" data-value="phone">Звонок на телефон</li>
+                        <li class="dropdown__list-item" data-value="sms">SMS сообщение</li>
+                        <li class="dropdown__list-item" data-value="telegram">Telegram</li>
+                      </ul>
+                      <input type="text" id="myform" name="select1" class="dropdown__input-hidden">
+                    </div>
+                  </div>
+
+                  <button class="button" type="submit">Отправить</button>
+                </form>
+              </div>
+            </div>
+          </section>
+          <!-- ююююююююююююююююююююююююююююююююю -->
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- мобильное меню   -->
+  <div class="modal__mb">
+    <div class="modal__mb_window">
+      <div class="modal_box">
+        <button type="button" class="burger-btn__close"></button>
+      </div>
+      <div class="burger-link">
+        <a class="modal__link" href="#about">Обо мне</a>
+        <a class="modal__link" href="#portf">Портфолио</a>
+        <a class="modal__link" href="#stages">Этапы работ</a>
+        <a class="modal__link" href="#rates">Цены</a>
+        <a class="modal__link" href="#yourpr">Обратная связь</a>
+      </div>
+      <div class="header__contact-box header__contact-box_moby">
+        <a class="modal__link_social links" href="tel:+79293398016">8&nbsp;929&nbsp;339&#8209;80&#8209;16</a>
+        <a class="modal__link_social modal__link_mail links" href="mailto:kea-asd@yandex.ru">kea&#8209;asd@yandex.ru</a>
+
+      </div>
+      <ul class="special__social-list special__social-list_moby">
+        <li class="special__items"><a href="" class="special__link links vk">Vk</a></li>
+        <li class="special__items"><a href="" class="special__link links in">Instagram</a></li>
+        <li class="special__items"><a href="" class="special__link links lind">Linkedin</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__box">
+        <div class="navigation footer__navigation">
+          <ul class="nav__list footer__list">
+            <li class="nav_items"><a class="header__nav_link links footer__links" href="#about">Обо&nbsp;мне</a></li>
+            <li class="nav_items"><a class="header__nav_link links footer__links" href="#portf">Портфолио</a></li>
+            <li class="nav_items"><a class="header__nav_link links footer__links" href="#stages">Этапы&nbsp;работ</a>
+            </li>
+            <li class="nav_items"><a class="header__nav_link links footer__links" href="#rates">Цены</a></li>
+            <li class="nav_items"><a class="header__nav_link links footer__links" href="#yourpr">Обратная&nbsp;связь</a>
+            </li>
+          </ul>
+        </div>
+        <div class="header__contact  ">
+          <div class="header__contact-box footer__contact-box">
+            <a class="header__nav_link links" href="tel:+79293398016">8&nbsp;929&nbsp;339&#8209;80&#8209;16</a>
+            <a class="header__nav_link nav_mail links" href="mailto:kea-asd@yandex.ru">kea&#8209;asd@yandex.ru</a>
+
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <p class="footer__copy">&#169; 2020, Все права защищены</p>
+        <p class="footer__copy">Сделано в рамках курса учебной платформы <a href="#" class="footer__frontend"
+            target="_blank" rel="noopener noreferrer">Frontend Blok</a></p>
+
+
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <div class="_modal" data-modal="modal-1">
+    <div class="modal-bg">
+      <div class="modal-body">
+        <div class="modal-close"><img src="images/burger_close.svg" alt="" /></div>
+        <div class="modal-content modal-callback">
+          <h2 class="modal-callback__title">Расскажите о&nbsp;своем проекте</h2>
+          <div class="modal-callback__text">
+            Заполните все поля, и я свяжусь с&nbsp;вами в&nbsp;ближайшее время
+          </div>
+          <div class="modal-callback__line"></div>
+        </div>
+        
+
+
+        <form class="modal__form" name="form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+          <label for="tel" class="modal__label modal_font">Телефон или почта</label>
+          <input class="modal__user modal_font" name="tel" type="text" placeholder="Введите телефон" required>
+          <span class="modal__label modal_font">Выберите удобный способ связи</span>
+          <div class="dropdown modal__users  modal_font">
+            <div class="dropdown__box">
+              <button type="button" class="dropdown__button">Telegram</button>
+              <span class="dropdown__button_arrow"></span>
+            </div>
+            <ul class="dropdown__list">
+              <li class="dropdown__list-item modal__form_item modal_font" data-value="whatsApp">WhatsApp</li>
+              <li class="dropdown__list-item modal__form_item modal_font" data-value="viber">Viber</li>
+              <li class="dropdown__list-item modal__form_item modal_font" data-value="phone">Звонок на телефон</li>
+              <li class="dropdown__list-item modal__form_item modal_font" data-value="sms">SMS сообщение</li>
+              <li class="dropdown__list-item modal__form_item modal_font" data-value="telegram">Telegram</li>
+            </ul>
+            <input type="text" name="select-category" class="dropdown__input-hidden">
+          </div>
+          <button class="button" type="submit">Отправить</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  <a href="#headerTop" class="to-up">&#8679;</a>
+
+</body>
+
+</html>

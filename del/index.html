@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: rgb(248, 242, 255);
+        font-size: 18px;
+      }
+      p:nth-child(even) {
+        background-color: rgb(246, 231, 255);
+        padding: 20px 0;
+      }
+      .container {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 0 auto;
+        max-width: 1000px;
+        background-color: rgb(252, 249, 255);
+      }
+    </style>
+    <div class="container">
+      <h1>Перед началом работы</h1>
+      <h3>Figma</h3>
+      <ul>
+        <li>
+          Какие шрифты используются в макете
+          <blockquote>
+            Скачать, установить в локально и добавить в body
+          </blockquote>
+        </li>
+        <li>
+          Выбрать переменные для повторяющихся шрифтов
+          <blockquote>:root { }</blockquote>
+          <blockquote>.a { }</blockquote>
+        </li>
+        <li>
+          Подумать варианты адаптива
+          <blockquote>использовать проценты %, vw, rem</blockquote>
+        </li>
+      </ul>
+      <h3>Единицы измерения</h3>
+      <p>rem html=10px шрифт(px) разделить на 10. 25px=2.5rem</p>
+      <p>1.5 = line-height*font/100</p>
+      <p>
+        шрифт умножь на 1.65 (165%) и раздели на шрифт получится 2 это если 200
+        процентов если 165, то умножь на 1.65
+      </p>
+      <h3>Полезные ссылки</h3>
+      <p>
+        проверка сайта http моби планш адаптив https://bluetree.ai/screenfly/
+      </p>
+      <p>Валидатор HTML https://validator.w3.org/#validate_by_uri</p>
+      <p>
+        Валидатор CSS https://jigsaw.w3.org/css-validator/#validate_by_input
+      </p>
+      <p>Сжатие картинок https://tinypng.com/</p>
+      <p>Can I Use https://caniuse.com/</p>
+      <p>Генерация фавиконок https://realfavicongenerator.net/</p>
+
+      <h3>Адаптивные размеры</h3>
+      <pre>
+ переменные
+ :root {
+    --f-size-s: 11px;
+    --f-size-m: 17px;
+    --f-size-lg: 30px;
+    --f-size-xl: 50px;
+}
+.a { 
+  font-size: var(--f-size-s;)
+  font-size: var(--f-size-m;)
+  font-size: var(--f-size-lg;)
+  font-size: var(--f-size-xl;)
+}
+
+ Мобильный
+    @media (max-width: 320px)
+        заголовок title =  30px 
+        текст description 12px 
+        между секциями 40px + 20px (padding) 
+        logo 96*25px лого
+        Шрифт кнопки  10px 
+        лого-социал 17px
+        footer 10px copy копирайт футер
+ планшеты
+    @media (max-width: 768px)
+        заголовок font-size: 40px;
+        текст font-size: 16px;
+        между секциями 110px + 20px (padding) 
+десктоп
+    @media (max-width: 1200px)
+        заголовок font-size: 45px;
+        текст font-size: 18px;
+        между секциями 190px + 20px (padding) 
+=       
+
+</pre
+      >
+      <h3>Размеры экрана</h3>
+      <pre>
+    Минимальная ширина экрана
+        @media (min-width: 1920px)
+        @media (min-width: 1440px)
+        @media (min-width: 960px)
+        
+      планшеты
+        @media (min-width: 768px)
+        
+      смартфоны
+        @media (min-width: 567px)
+        @media (min-width: 480px)
+        @media (min-width: 320px)
+        
+            = max ====================================
+            @media (max-width: 1200px)
+        @media (max-width: 960px)
+        
+            = планшеты
+        @media (max-width: 768px)
+            = смартфоны
+        @media (max-width: 567px)
+        @media (max-width: 480px)
+        @media (max-width: 320px)</pre
+      >
+
+      шаблоны надо для начала работы чекбокс модалка мобильное меню аккордион
+      html { font-size: 10px; @media (max-width: $r_mob_500) { font-size: 8px; }
+      body { font-size: 1.6rem; } ховер линии .nav-items::after { display:
+      block; position: relative; content: ""; height: 1px; width: 0;
+      background-color: #2B3541; transition: width .2s ease-in-out, left .5s
+      ease-in-out; left: 0%; bottom: -10px; } .nav-items:hover::after { width:
+      100%; } :nth-child(odd)even {...} нечетные
+      <div>
+        <pre>
+    font-family: 'Avenir Next Cyr';
+    font-style: normal;
+    font-weight: 400;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: rgba(134, 134, 134, 1);
+</pre
+        >
+      </div>
+    </div>
+    <!-- бургер меню  -->
+    <!-- бургер кнопка  -->
+    <button
+      class="burger-btn header-burger"
+      onclick="openModal()"
+      type="button"
+    >
+      O
+    </button>
+    <!-- менюшка -->
+    <div class="modal__mb" id="modal__mb">
+      <div class="modal_window">
+        <div class="modal_box">
+          <div class="modal_logo">d</div>
+          <button onclick="closeModal()" class="header-modal-close"></button>
+        </div>
+        <div class="burger-link">
+          <a class="modal_link" href="#special">Услуги</a>
+          <a class="modal_link" href="#process">Галерея</a>
+          <a class="modal_link" href="#comand">Акции</a>
+          <a class="modal_link" href="#comand">сертификаты</a>
+          <a class="modal_link" href="#comand">Контакты</a>
+        </div>
+      </div>
+    </div>
+    <pre>
+     
+burger_menu.svg close_moby.svg стили бургер-кнопки .burger-btn {
+  background-image: url(../img/burger_menu.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  border: none;
+  background-color:
+    transparent;
+  height: 16px;
+  width: 24px;
+}
+
+.header-burger {
+  display: block;
+}
+
+стили крестика========.header-modal-close {
+  background-image:
+    url(../img/close_moby.svg);
+  background-repeat: no-repeat;
+  background-size:
+    contain;
+  border: none;
+  background-color: transparent;
+  height: 16.97px;
+  width: 16.97px;
+}
+
+/* бургер меню */
+.modal__mb {
+  position: fixed;
+  top: 0;
+  left: -3000px;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  background: rgba(0, 0, 0, 0.59);
+  transition: 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.modal_window {
+  position: relative;
+  background-color: #9E9D52;
+  padding:
+    40px 20px;
+  height: 100%;
+  width: 100%;
+  max-width: 500px;
+}
+
+.burger-link {
+  margin-top: 30px;
+}
+
+.modal_link {
+  display: block;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 136.8%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.modal_logo {
+  display: block;
+  background-image: url(../img/logo_mobile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 46px;
+  height:
+    40.89px;
+}
+
+.modal_box {
+  display: flex;
+  justify-content: space-between;
+}
+    <!-- js  -->
+    function openModal() { document.getElementById("modal__mb").style.left =
+    "0px"; } function closeModal() {
+    document.getElementById("modal__mb").style.left = "-3000px"; }
+    </pre>
+
+    <!-- мобильное меню 1-1 модалка -->
+
+    <form action="#" class="modal block_center">
+      <div class="modal__inner">
+        <button type="button" class="modal__close"></button>
+        <h2 class="modal__header">регистрация</h2>
+        <div class="modal__elements">
+          <div class="modal__item">
+            <input class="modal__input" type="text" placeholder="Ваше имя" />
+          </div>
+          <div class="modal__item">
+            <input class="modal__input" type="email" placeholder="e-mail" />
+          </div>
+          <div class="modal__item">
+            <input
+              class="modal__input"
+              type="tel"
+              placeholder="номер телефона"
+            />
+          </div>
+        </div>
+        <button type="submit">Отправить</button>
+      </div>
+    </form>
+    <pre>
+      <!-- мобильное меню 1-2 css -->
+    .block_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .modal {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-x: auto;
+    z-index: 10;
+    padding:
+      3rem 0;
+    background: rgba(0, 0, 0, 0.8);
+    /* display: none; */
+  }
+  
+  .modal__inner {
+    max-width: 663px;
+    width: 100%;
+    padding: 9rem 9.5rem;
+    background-color:
+      #fff;
+    text-align: center;
+  }
+  
+  .modal__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: block;
+    height: 30px;
+    width: 30px;
+    background-image:
+      url(../image/close.svg);
+    background-repeat: no-repeat;
+    background-size:
+      contain;
+    background-color: transparent;
+  
+    .modal__elements {
+      margin: 0 auto;
+      max-width: 44.4rem;
+    }
+  
+    .noscroll {
+      overflow: hidden;
+      height: 100%;
+    }
+   
+    js
+// modal
+    window const modalWindow = document.querySelector('.modal'); const
+    buttonModals = document.querySelectorAll('.modal__button'); const modalClose
+        = document.querySelector('.modal__close'); const body =
+            document.querySelector('body'); // по клику по кнопке включаем меню //
+    убираем прокрутку с body buttonModals.forEach((item) => {
+                item.addEventListener('click', () => {
+                    modalWindow.style.display = 'flex';
+                    body.classList.add('noscroll');
+                });
+            }); // закрываем модалку при нажатии вне
+// вернем прокрутку в body modalWindow.addEventListener('click', (e) => {
+const isModal = e.target.closest('.modal__inner'); if (!isModal) {
+    modalWindow.style.display = 'none'; body.classList.remove('noscroll');
+} });
+// по клику на крестик включаем скрол modalClose.addEventListener('click',
+() => {
+    modalWindow.style.display = 'none';
+    body.classList.remove('noscroll');
+})
+https://nexoos.ru/moduli/podgruzka-tovarov-po-knopke.html еще Дани модалка
+    </pre>
+    <button class="modal__btn _modal-open" data-modal-open="modal-1">
+      <img src="img/click.svg" alt="" />
+      Click me!
+    </button>
+
+    <div class="_modal" data-modal="modal-1">
+      <div class="modal-bg">
+        <div class="modal-body">
+          <div class="modal-close"><img src="img/close.svg" alt="" /></div>
+          <div class="modal-content modal-callback">
+            <div class="modal-callback__title">Перезвоните нам!</div>
+            <div class="modal-callback__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+              qui culpa reprehenderit praesentium. Natus aliquid dolore
+              excepturi quae illo, odit nihil magnam ut vel perferendis! Eos
+              quaerat harum placeat debitis impedit, fugit modi error earum ab.
+              Fuga, eius atque nesciunt incidunt, sint illum aspernatur
+              voluptatem fugit tenetur, doloremque esse facere eos blanditiis.
+              Quo nesciunt itaque tempore sequi recusandae aut. Maiores ex
+              architecto dolorem? Non quidem accusantium, nesciunt consequuntur
+              labore, debitis quas vel iusto nam dolor molestias assumenda fugit
+              nostrum. Dolorem voluptatem vel incidunt autem laudantium
+              molestias dolorum nemo amet porro exercitationem, praesentium
+              asperiores ipsam placeat eveniet delectus eius ab quo impedit
+              accusamus temporibus ullam aperiam minima. Impedit vel dignissimos
+              nobis minima, aperiam provident, assumenda neque, odit magni
+              deserunt sunt autem natus. Consectetur a quasi saepe voluptas,
+              aperiam nemo suscipit illum harum ea modi est tempora? Veniam
+              praesentium recusandae totam inventore architecto, ab cum ad
+              reprehenderit impedit excepturi exercitationem, soluta, similique
+              omnis molestias minus! Corporis tenetur suscipit odio facilis
+              accusantium enim a recusandae necessitatibus reiciendis velit
+              commodi adipisci harum officiis natus, ad debitis officia, quae
+              praesentium deserunt odit eligendi minima. Autem nesciunt cumque
+              magni provident labore blanditiis aliquid recusandae, dignissimos
+              sapiente ducimus atque qui eius ad cupiditate molestiae explicabo.
+              Ratione soluta recusandae expedita vel distinctio ea officia
+              officiis sint voluptates eos! Reiciendis, nobis! Aut, minus
+              dolore, atque soluta ullam velit sequi impedit aspernatur quidem
+              tempora sunt, exercitationem laboriosam mollitia distinctio
+              consequuntur quod vitae. Cupiditate hic deleniti non, rerum
+              explicabo repellat recusandae dolores unde? Consequuntur
+              necessitatibus libero delectus numquam inventore vitae assumenda
+              modi veniam cum explicabo voluptate accusantium facere amet,
+              magnam ad tempora eos maxime eveniet et, illum reiciendis laborum,
+              porro perferendis. Voluptates illum dolorem error corrupti omnis
+              enim quae officia quaerat deleniti odio ad, assumenda ullam
+              laboriosam consectetur esse distinctio ex. Vel deleniti corporis
+              eveniet reiciendis dolores sed explicabo, quibusdam vitae quae
+              minus adipisci nulla itaque provident, minima pariatur repellat
+              harum ad eligendi corrupti suscipit facere fugit nisi. Aut
+              adipisci quidem dignissimos nihil quasi, nemo corrupti recusandae.
+              Rerum molestias voluptates nemo, iusto pariatur, voluptatum
+              similique repellendus architecto inventore amet doloremque non ad
+              magnam aut porro totam hic ea exercitationem iure reiciendis! Quis
+              molestiae odio tempore laborum. Aspernatur architecto suscipit
+              iure asperiores quod vero quas? Laborum expedita recusandae saepe
+              rem et incidunt neque harum adipisci, dolor minima animi ex alias
+              suscipit doloribus, consequuntur laboriosam architecto nisi rerum
+              hic ducimus cupiditate id dignissimos aspernatur pariatur! Autem
+              iste cumque placeat, facilis soluta, recusandae iusto illo
+              exercitationem rem at, illum nisi. Dolore sed expedita veritatis
+              quod nemo cupiditate earum eum dicta sapiente reiciendis dolorem
+              soluta perferendis facere quas, voluptate ipsum quidem minus in
+              quo provident vel rem qui sequi odio. Nesciunt nam sed libero
+              architecto deserunt voluptatibus ducimus voluptates nostrum,
+              consequatur alias iusto aut doloribus iste suscipit velit cumque,
+              autem dolores ex vero quae itaque. Suscipit eos placeat autem
+              animi, fugiat veritatis possimus et necessitatibus delectus sit
+              unde reiciendis eligendi veniam quidem sed numquam beatae
+              voluptate non facere expedita tenetur! Dolor, nihil tempora, eius
+              blanditiis pariatur magnam necessitatibus molestias mollitia
+              repellat perferendis in quam. Ipsam.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    стили ._locked { overflow: hidden; } .modal__btn { border: none;
+    background-color: #f36262; padding: 5px 10px; color: #fff; display:
+    -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center;
+    -ms-flex-align: center; align-items: center; gap: 5px; font-size: 20px;
+    cursor: pointer; } ._modal { width: 100%; height: 100vh; position: fixed;
+    top: 0; left: 0; z-index: 10; visibility: hidden; opacity: 0;
+    -webkit-transition: all .2s; transition: all .2s; pointer-events: none; }
+    ._modal._active { opacity: 1; visibility: visible; pointer-events: all; }
+    .modal-bg { width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8);
+    display: -webkit-box; display: -ms-flexbox; display: flex; padding: 20px; }
+    .modal-body { padding: 24px; background-color: #fff; width: 700px; margin:
+    auto; max-height: 90%; overflow: auto; border-radius: 16px; position:
+    relative; } .modal-close { position: absolute; top: 16px; right: 16px;
+    cursor: pointer; } const modalBtns =
+    document.querySelectorAll('._modal-open'); const modals =
+    document.querySelectorAll('._modal'); const body = document.body; function
+    openModal(elem) { elem.classList.add('_active');
+    body.classList.add('_locked') } function closeModal(e) { if
+    (e.target.classList.contains('modal-close') ||
+    e.target.closest('.modal-close') || e.target.classList.contains('modal-bg'))
+    { e.target.closest('._modal').classList.remove('_active');
+    body.classList.remove('_locked') } } modalBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => { let data =
+    e.target.dataset.modalOpen; modals.forEach(modal => { if
+    (modal.dataset.modal == data || modal.dataset.modal ==
+    e.target.closest('._modal-open').dataset.modalOpen) { openModal(modal) } })
+    }) }) modals.forEach(modal => { modal.addEventListener('click', e =>
+    closeModal(e)) }) window.addEventListener('keydown', e => {
+    modals.forEach(modal => { if (e.key === "Escape" &&
+    modal.classList.contains('_active')) { modal.classList.remove('_active');
+    body.classList.remove('_locked'); } }) })
+  </body>
+</html>

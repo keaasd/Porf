@@ -1,0 +1,893 @@
+/* полезные ссылки: метхе https: //github.com/Maksim-Methed/videotube
+https: //jsonplaceholder.typicode.com/
+==https: //shaktyka.github.io/pc_assemb/
+сборка ПК====крутой свайпер swiper slider слайдер уроки 8шт https: //www.youtube.com/playlist?list=PLyf8LgkO_8q87TteiUKzD74raAOu8LpcD
+==https: //cp.beget.com/sites
+сайт домен http: //keaasd.beget.tech/
+hf.beget.tech/public_html==https: //habr.com/ru/company/funcorp/blog/538982/
+веб-пак вебпак webpack https: //github.com/annblok/Modele02-Shop
+Анна репозиторий=https: //www.youtube.com/watch?v=Q5C8MKlbANU&t=595s
+вордпресс wordpress=анна блок макет айболит https: //www.youtube.com/watch?v=UZ_OMrgbkyE
+==классы https: //den7466.github.io/Module01-Test/portfolio/  
+===========data-pid="51"
+webkit-text-size-adjust: none; */
+
+заглавные буквы {
+text-transform: uppercase;}
+&:hover:after {}
+
+.nav_mail::after {
+    content: "";
+    position: absolute;
+    left: -0.8vw;
+    bottom: 0;
+    display: block;
+    height: 24px;
+    width: 1px;
+    opacity: 0.2;
+    background-color: #010101;
+  }:not(:first-child)
+&::after {
+    content: "";
+    position: absolute;
+    left: -0.8vw;
+    bottom: 0;
+    display: block;
+    height: 24px;
+    width: 1px;
+    opacity: 0.2;
+    background-color: #010101;
+  }
+  :nth-child(1n+2) кроме первого
+==:root {
+    --text-size-medium;
+}
+
+.a {
+    font-size: var(--text-size-medium; )
+}
+
+==кнопка button html type="button"data-tabs-handler="interior"data-some-attr="attr"
+
+можешь обернуть в span и поставить white-space: nowrap чтобы тире не переносило==https: //flizerzet.github.io/polyphonie_landing/
+
+==svg-спрайты===.background-img {
+    background-image: url(https://cutewallpaper.org/21/  h-.jpg);
+    max-width: 800px;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 30px auto;
+
+    box-shadow: 0 0 5px #2a3cad;
+    border-radius: 10px;
+    ===ограничить текст в одну строчку строку display: -webkit-box;
+    overflow: hidden;
+    line-clamp: 1;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+
+    ==<label><input type="checkbox"value="1"name="k"><span></span></label>label {
+        width: 32px;
+        /* Ширина рисунка */
+        height: 26px;
+        /* Высота рисунка */
+        display: block;
+        /* Блочный элемент */
+        position: relative;
+        /* Относительное позиционирование */
+    }
+
+    input[type="checkbox"]+span {
+        position: absolute;
+        /* Абсолютное позиционирование */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url(images/switch.png) no-repeat;
+        /* Фоновый рисунок */
+        cursor: pointer;
+        /* Курсор в виде руки */
+    }
+
+    input[type="checkbox"]:checked+span {
+        background-position: 0 -26px;
+    }
+
+    ==.box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "a b c""d d c";
+        gap: 10px;
+        text-align: center;
+    }
+
+    .box>div {
+        background-color: lightblue;
+        padding: 20px;
+    }
+
+    .box>div:nth-child(1) {
+        grid-area: a;
+    }
+
+    .box>div:nth-child(2) {
+        grid-area: b;
+    }
+
+    .box>div:nth-child(3) {
+        grid-area: c;
+    }
+
+    .box>div:nth-child(4) {
+        grid-area: d;
+    }
+
+    ==animation: typing 1.5s steps(20, end);
+
+    @-webkit-keyframes typing {
+        from {
+            width: 0
+        }
+
+        to {
+            width: 100%
+        }
+    }
+
+    @keyframes typing {
+        from {
+            width: 0
+        }
+
+        to {
+            width: 100%
+        }
+    }
+
+    ==трясется тряска animation: shaking-text .3s linear infinite both;
+
+    @-webkit-keyframes shaking-text {
+        0% {
+            transform: translate(0)
+        }
+
+        20% {
+            transform: translate(-2px, 2px)
+        }
+
+        40% {
+            transform: translate(-2px, -2px)
+        }
+
+        60% {
+            transform: translate(2px, 2px)
+        }
+
+        80% {
+            transform: translate(2px, -2px)
+        }
+
+        to {
+            transform: translate(0)
+        }
+    }
+
+    @keyframes shaking-text {
+        0% {
+            transform: translate(0)
+        }
+
+        20% {
+            transform: translate(-2px, 2px)
+        }
+
+        40% {
+            transform: translate(-2px, -2px)
+        }
+
+        60% {
+            transform: translate(2px, 2px)
+        }
+
+        80% {
+            transform: translate(2px, -2px)
+        }
+
+        to {
+            transform: translate(0)
+        }
+    }
+
+    ==мобильный размеры h2 30px заголовок text 12px текст description section 60px между секциями logo 96*25px лого button 10px кнопка footer 10px copy копирайт футер=<style>[data-tooltip] {
+        position: relative;
+        /* Относительное позиционирование */
+    }
+
+    [data-tooltip]::after {
+        content: attr(data-tooltip);
+        /* Выводим текст */
+        position: absolute;
+        /* Абсолютное позиционирование */
+        width: 300px;
+        /* Ширина подсказки */
+        left: 0;
+        top: 0;
+        /* Положение подсказки */
+        background: #3989c9;
+        /* Синий цвет фона */
+        color: #fff;
+        /* Цвет текста */
+        padding: 0.5em;
+        /* Поля вокруг текста */
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        /* Параметры тени */
+        pointer-events: none;
+        /* Подсказка */
+        opacity: 0;
+        /* Подсказка невидима */
+        transition: 1s;
+        /* Время появления подсказки */
+    }
+
+    [data-tooltip]:hover::after {
+        opacity: 1;
+        /* Показываем подсказку */
+        top: 2em;
+        /* Положение подсказки */
+    }
+
+    </style></head><body><p data-tooltip="Всплывающая подсказка сообщает о чём-то многозначном и полезном...">Наведи сюда курсор.</p></body></html>==кнопка вверх наверх up ___поставить в header id="headerTop"
+
+    ___ html <a href="#headerTop"class="button-up hidden"id="btnUp"></a>___ css .button-up {
+        position: fixed;
+        background-image: url(../img/icons/Arrow.svg);
+        width: 52px;
+        height: 55px;
+        cursor: pointer;
+        border: none;
+        text-decoration: none;
+        bottom: 20px;
+        right: 20px;
+        transition: 0.2s;
+    }
+
+    .button-up.hidden {
+        opacity: 0;
+    }
+
+    .button-up.visible {
+        opacity: 1;
+    }
+
+    ___ js // Button Up
+
+    window.onscroll=function() {
+        scrollFunction()
+    }
+
+    ;
+
+    const upbuttons=document.querySelectorAll(".button-up");
+
+    for (const upbutton of upbuttons) {
+        upbutton.addEventListener("click", clickHandler);
+    }
+
+    function clickHandler(e) {
+        e.preventDefault();
+        const href=this.getAttribute("href");
+
+        document.querySelector(href).scrollIntoView( {
+                behavior: "smooth"
+            }
+
+        );
+    }
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+            document.getElementById('btnUp').className='button-up visible';
+        }
+
+        else {
+            document.getElementById('btnUp').className='button-up hidden';
+        }
+    }
+
+    ==<meta name="viewport"content="width=device-width, initial-scale=1.0"/><link rel="stylesheet"href="device.css"media="only screen and (max-device width:640px)"/>=====ховер .class {
+        color: #000;
+    }
+
+    @media (any-hover: hover) {
+        .class:hover {
+            color: #f00;
+        }
+    }
+
+    ===hover можно выключать. Есть 2 способа: 1) через медиа-запрос min-width: media(min-width: 767px) {
+        &:hover {
+            ...
+        }
+    }
+
+    (медиа-запрос для устройств, экран которых >767px) 2) этот способ чуть более универсальный,
+    выбирает все устройства,
+    поддерживающие hover @media (any-hover: hover) {
+        &:hover {}
+    }
+
+    часто вижу,
+    что на мобилках есть hover,
+    хотя он там не нужен,
+    так как у touch-скринов в принципе нет понятия "наведение",
+    есть понятие "touch",
+    в простонародье "тык"
+
+    если hover необходим (такие случаи бывают, если, например, на компьютере при hover надо показать какую-либо инфу),
+    то стили для мобилок надо писать сразу такие,
+    как у вас в hover,
+    например: &:hover {
+        opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+        opacity: 1;
+    }
+
+    ===размер экрана @media (max-width: 2000px) @media (max-width: 1440px) @media (max-width: 960px) планшеты @media (max-width: 768px) смартфоны @media (max-width: 567px) @media (max-width: 480px) @media (max-width: 320px) ? Высота: 1349 ? 625 to go for a 600px - 960px width max but using percentages */==$r_minmob: 320px;
+    $r_mob_360: 360px;
+    $r_mob_400: 400px;
+    $r_mob_500: 500px;
+    $r_tab: 768px;
+    $r_tab_900: 900px;
+    $r_desk: 1000px;
+    $r_desk_hd: 1200px;
+    $r_desk_1280: 1280px;
+    $r_desk_wxga_xxl: 1360px;
+
+
+    @media (max-width: $r_tab_500) {
+        padding: 2rem 15px 0;
+    }
+
+
+    <style type="text/css">
+    /* default styles here for older browsers.       I tend to go for a 600px - 960px width max but using percentages    */
+
+    @media only screen and (min-width: 960px) {
+        /* styles for browsers larger than 960px; */
+    }
+
+    @media only screen and (min-width: 1440px) {
+        /* styles for browsers larger than 1440px; */
+    }
+
+    @media only screen and (min-width: 2000px) {
+        /* for sumo sized (mac) screens */
+    }
+
+    @media only screen and (max-device-width: 480px) {
+        /* styles for mobile browsers smaller than 480px; (iPhone) */
+    }
+
+    @media only screen and (device-width: 768px) {
+        /* default iPad screens */
+    }
+
+    /* different techniques for iPad screening */
+
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+        /* For portrait layouts only */
+    }
+
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+
+        /* For landscape layouts only */
+        =======ховер медиа отключить ховер адаптив @media (min-width: 390px) {
+            color: #000;
+        }
+
+        @media (min-width: 499px) {
+            color: #000;
+        }
+
+        @media (min-width: 990px) {
+            color: #000;
+        }
+
+        @media screen and (max-width: 1000px) {
+            #header {
+                background: #543567;
+                /* Красим шапку */
+            }
+        }
+
+        @media screen and (min-width: 1000px) {
+            .txt {
+                font: 25px Verdana bold;
+                /* Показываем заголовок */
+                position: relative;
+                top;
+                15px;
+                left: 30px;
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            #content {
+                background: #657493;
+                /* Меняем цвет текста и фона содержимого */
+                color: #fff;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            img {
+                float: right;
+                /* Смещаем логотип вправо */
+            }
+        }
+
+        ==бем бэм «что это?» Название элемента характеризует смысл («что это?» — «пункт»: item, «текст»: text),
+        а не состояние («какой, как выглядит?» — «красный»: red, «большой»: big). main header>logo>nav>header__nav>header__item>header__link>header__tel>header__cart>header__counter (счетчик) class="container"
+        "slider"
+        "slide"
+        "title"
+        "slide-text"
+        "button button-primary"
+        ===слайдер шаблон slider скрол обычный=родилелю: overflow: hidden;
+        height: 597px;
+        =детю width: auto;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding-bottom: 136px;
+
+        ==html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        < !-- Swiper --><div class="swiper mySwiper"><div class="swiper-wrapper"><div class="swiper-slide">Slide 1</div><div class="swiper-slide">Slide 9</div></div><div class="swiper-button-next"></div><div class="swiper-button-prev"></div><div class="swiper-pagination"></div></div>< !-- Swiper JS --><script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>< !-- Initialize Swiper --><script>var swiper=new Swiper(".mySwiper", {
+
+                slidesPerView: 3,
+                spaceBetween: 30,
+                slidesPerGroup: 3,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                }
+
+                ,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                }
+
+                ,
+            }
+
+        );
+        </script>еще раз верстка < !-- slider --><div class="slider"><div class="swiper offerSwiper"><div class="swiper-wrapper">< !-- slide 1 --><div class="swiper-slide swiper-slide_white swiper-slide_milk"><h3 class="swiper-slide__title">Молочные продукты</h3><div class="swiper-slide__hover"><p class="swiper-slide__text">В наши дни появилась мода на&nbsp;
+        здоровое питание,
+        поэтому на&nbsp;
+        рынке питания разработали органическое молоко. Органическое молоко является продуктом органического животноводства</p><a class="swiper-slide__link"href="#">Подробнее</a></div></div>< !-- slide 2 --><div class="swiper-slide swiper-slide_white swiper-slide_pasta"><h3 class="swiper-slide__title">Бакалея</h3><div class="swiper-slide__hover"><p class="swiper-slide__text">В наши дни появилась мода на&nbsp;
+        здоровое питание,
+        поэтому на&nbsp;
+        рынке питания разработали органическое молоко. Органическое молоко является продуктом органического животноводства</p><a class="swiper-slide__link"href="#">Подробнее</a></div></div>< !-- slide 3 --><div class="swiper-slide swiper-slide_white swiper-slide_steaks"><h3 class="swiper-slide__title">Мясо,
+        птица</h3><div class="swiper-slide__hover"><p class="swiper-slide__text">В наши дни появилась мода на&nbsp;
+        здоровое питание,
+        поэтому на&nbsp;
+        рынке питания разработали органическое молоко. Органическое молоко является продуктом органического животноводства</p><a class="swiper-slide__link"href="#">Подробнее</a></div></div>< !-- slide 4 --><div class="swiper-slide swiper-slide_white swiper-slide_milk"><h3 class="swiper-slide__title">Молочные продукты</h3><div class="swiper-slide__hover"><p class="swiper-slide__text">В наши дни появилась мода на&nbsp;
+        здоровое питание,
+        поэтому на&nbsp;
+        рынке питания разработали органическое молоко. Органическое молоко является продуктом органического животноводства</p><a class="swiper-slide__link"href="#">Подробнее</a></div></div>< !-- slide 5 --><div class="swiper-slide swiper-slide_white swiper-slide_pasta"><h3 class="swiper-slide__title">Бакалея</h3><div class="swiper-slide__hover"><p class="swiper-slide__text">В наши дни появилась мода на&nbsp;
+        здоровое питание,
+        поэтому на&nbsp;
+        рынке питания разработали органическое молоко. Органическое молоко является продуктом органического животноводства</p><a class="swiper-slide__link"href="#">Подробнее</a></div></div>< !-- slide 6 --><div class="swiper-slide swiper-slide_white swiper-slide_steaks"><h3 class="swiper-slide__title">Мясо,
+        птица</h3><div class="swiper-slide__hover"><p class="swiper-slide__text">В наши дни появилась мода на&nbsp;
+        здоровое питание,
+        поэтому на&nbsp;
+        рынке питания разработали органическое молоко. Органическое молоко является продуктом органического животноводства</p><a class="swiper-slide__link"href="#">Подробнее</a></div></div>< !-- slide 7 --><div class="swiper-slide swiper-slide_white swiper-slide_milk"><h3 class="swiper-slide__title">Молочные продукты</h3><div class="swiper-slide__hover"><p class="swiper-slide__text">В наши дни появилась мода на&nbsp;
+        здоровое питание,
+        поэтому на&nbsp;
+        рынке питания разработали органическое молоко. Органическое молоко является продуктом органического животноводства</p><a class="swiper-slide__link"href="#">Подробнее</a></div></div>< !-- slide 8 --><div class="swiper-slide swiper-slide_white swiper-slide_pasta"><h3 class="swiper-slide__title">Бакалея</h3><div class="swiper-slide__hover"><p class="swiper-slide__text">В наши дни появилась мода на&nbsp;
+        здоровое питание,
+        поэтому на&nbsp;
+        рынке питания разработали органическое молоко. Органическое молоко является продуктом органического животноводства</p><a class="swiper-slide__link"href="#">Подробнее</a></div></div>< !-- slide 9 --><div class="swiper-slide swiper-slide_white swiper-slide_steaks"><h3 class="swiper-slide__title">Мясо,
+        птица</h3><div class="swiper-slide__hover"><p class="swiper-slide__text">В наши дни появилась мода на&nbsp;
+        здоровое питание,
+        поэтому на&nbsp;
+
+        рынке питания разработали органическое молоко. Органическое молоко является продуктом органического животноводства</p><a class="swiper-slide__link"href="#">Подробнее</a></div></div></div><div class="swiper-button-next"></div><div class="swiper-button-prev"></div><div class="swiper-pagination"></div></div></div>=<input class="popup-tel"type="tel"name="popup"id=""placeholder="+7 ("required>.popup-mail {
+            display: block;
+            width: 100%;
+            padding: 10px 19px;
+            font-size: 18px;
+            height: 100%;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+            border: 1px solid transparent;
+        }
+
+        .popup-mail:focus {
+            outline: 1px solid #FBF138;
+            background: #FFFFFF;
+        }
+
+        .popup-mail:focus:invalid {
+            outline: 1px solid #AE0303;
+        }
+
+        ===часто используемые шаблон==пиксель перфект pixel perf Ctrl+h Shift+H (показать скрыть) Ctrl+i Shift+I (замок двигать) лево право двигать photoshop Ctrl+H убрать вспомогательные линии=псевдоклассы бефо афте &::before content: '';
+        display: block;
+        width: 25px;
+        height: 25px;
+        opacity: .8;
+
+        ==афте &::after {
+            content: '';
+            position: absolute;
+            background-color: rgba($green, 0.6);
+            bottom: 3px;
+            left: 0;
+            width: 100%;
+            display: block;
+
+            ==flex флекс display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
+
+            &:hover===background фон bac иш bi i background-image: url(../images/refresh.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+
+            
+
+            width: 25px;
+            height: 25px;
+            max-width: 100%;
+
+
+            ==отступы margin padding box-sizing: border-box;
+            border: 1px solid rgba(39, 48, 15, 0.4);
+            border-radius: 2rem;
+            padding: 40px 30px 40px;
+
+            ==шрифт размер шрифта font font-size: 3 font-weight: 700;
+            font-family: sans-serif;
+            font-style: italic;
+            line-height: 1.2;
+            padding: 0;
+            margin: 0;
+            letter-spacing: 1px;
+
+            ==link ссылки a а color: green;
+            text-decoration-color: $green;
+            text-decoration: none;
+
+            ==ul список padding-left: 0;
+            list-style: none;
+
+            ==телефон почта емаил <a class="fo"href="tel:+79453425555">+7 945 342 55 55</a><a class="fo"href="mailto:healthlyfood@mail.ru">healthlyfood@mail.ru</a>button btn кнопка padding: 30px 60px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            cursor: pointer;
+            border: 1px solid #FFFFFF;
+            border: 1px solid #FFFFFF;
+            color: #FFFFFF;
+            background-color: #020C1E;
+            transition: 0.3s;
+            ===--------------------------------добавить иконки соцсетей шаблон <ul class="social-icons"><li><a class="social-icon-twitter"href="#"title="..."target="_blank"rel="noopener"></a></li><li><a class="social-icon-fb"href="#"title="..."target="_blank"rel="noopener"></a></li><li><a class="social-icon-vk"href="#"title="..."target="_blank"rel="noopener"></a></li><li><a class="social-icon-telegram"href="#"title="..."target="_blank"rel="noopener"></a></li><li><a class="social-icon-youtube"href="#"title="..."target="_blank"rel="noopener"></a></li></ul>==обтекание текста:
+                word-break: normal;
+            ================игра https: //ohmygit.org/
+                https: //learngitbranching.js.org/?locale=ru_RU
+                https: //overapi.com/git шпаргалка
+
+                …or create a new repository on the command line echo "# Module02-Test">> README.md git init git add README.md git commit -m "first commit"
+                git branch -M main git remote add origin https: //github.com/keaasd/Module02-Test.git
+                git push -u origin main===…or push an existing repository from the command line git remote add origin https: //github.com/keaasd/Module02-Test.git
+                git branch -M main git push -u origin main==анимация transform: rotate(0.5turn);
+            animation: typing 1.5s steps(20, end);
+            -=Рекомендации по формату и размеру фавиконки https: //realfavicongenerator.net/
+
+                <link rel="icon"type="image/png"sizes="32x32"href="favicon/favicon-32x32.png"> Размер: 120 × 120,
+                32 × 32 или 16 × 16 пикселей. Формат: SVG (рекомендуемый), ICO, GIF, JPEG, PNG, BMP. Анимация не поддерживается. rel="icon"
+                =тень box shadow // box-shadow: 0 0 0 1px rgba($green, 0.4), 0 0 0 53px rgba($green, 0), 0 0 0 54px rgba($green, 0.4);
+                =мобильный советы адаптив размеры h2 30px заголовок text 12px текст description section 60px секция logo 96*25px лого button 10px кнопка footer 10px copy копирайт футер==пример названий медиа экранов $r_minmob: 320px;
+            $r_mob_360: 360px;
+            $r_desk_wxga_xxl: 1360px;
+
+            <svg fill="#d26a22"
+            ==class="aaaa"onclick="openModal()"
+
+            <button class="burger-btn header-burger"onclick="openModal()"type="button"></button>< !-- Mobile pop up --><div class="modal-window"id="modal"><div class="modal"><div class="header-modal"><div class="header-modal-logo"></div><button onclick="closeModal()"class="header-modal-close"></button></div></div></div></div>Насчет модальных окон. Мне подсказали такой вариант...может кому то поможет...надеюсь никого не дезинформирую,
+            поэтому решайте сами применять или нет В js прописать: function openModal(name) {
+                document.body.className='js-modal-'+name;
+            }
+
+            function closeModal() {
+                document.body.className='';
+            }
+
+            бургер меню burger btn menu Вместо 'js-modal-'пишите любое имя какое хотите..остальное не менять и на конце обязательно -. Потом когда будете прописывать свойства в css,
+            то будет,
+            например,
+            такая запись .js-modal-menu #modal {
+                display: block;
+            }
+
+            В html где прописываете onclick="openModal() в скобочка пишите любое имя, одно для формы, другое для всплывающего меню, например, для формы onclick="openModal('form'),
+            а для меню onclick="openModal('menu')
+
+            В css оформляете окна как на уроках==
+
+            /* ==== стрелка наверх =========================*/
+            .back_to_top {
+                position: fixed;
+                bottom: 80px;
+                right: 40px;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                font-weight: 700;
+                background: #FBB731;
+                color: #444;
+                cursor: pointer;
+                border-radius: 2px;
+                display: none;
+
+            }
+
+            .back_to_top:hover {
+                background: #F37335;
+            }
+
+            .back_to_top-show {
+                display: block;
+            }
+
+            ===.footer-navs ul li a:hover:before,
+            .pagination ul li a.active:before,
+            .pagination ul li a:hover:before {
+                right: 0;
+                transition: all .16s ease-in-out;
+            }
+
+            .a:hover:before,
+            .pagination ul li a.active:before,
+            .pagination ul li a:hover:before {
+                ======.process {}
+
+                .process li:first-child {}
+
+                // первый li в списке
+                ul>li:last-child // псевдокласс для выбора последнего дочернего элемента.
+
+                .process li:last-child {}
+
+                // последний li в списке
+                .process li:nth-child (4) {}
+
+                // 4й li в списке
+                .process::before {
+                    content: ' ';
+                }
+
+                // в начале вставляется.
+                ::after // в конце тега вставляется
+                ::hover // при наведении
+                p::first-line // псевдоэлементы для стилизации части элемента: первой строки параграфа или первой буквы. (только блочные)
+
+                display: flex;
+                justify-content: flex-end;
+                justify-content которое выравнивает элементы горизонтально и принимает следующие значения: justify-content: flex-start: Элементы выравниваются по левой стороне контейнера. justify-content: flex-end: Элементы выравниваются по правой стороне контейнера. justify-content: center: Элементы выравниваются по центру контейнера. justify-content: space-between: Элементы отображаются с одинаковыми отступами между ними. justify-content: space-around: Элементы отображаются с одинаковыми отступами вокруг них. align-items: выравнивает элементы вертикально и принимает следующие значения: flex-start: Элементы выравниваются по верхнему краю контейнера. flex-end: Элементы выравниваются по нижнему краю контейнера. center: Элементы выравниваются вертикально по центру контейнера. baseline: Элементы отображаются на базовой линии контейнера. stretch: Элементы растягиваются,
+                чтоб заполнить контейнер.======flex-direction: задает направление,
+                в котором будут расположены элементы в контейнере. row: элементы размещаются по направлению текста. row-reverse: элементы отображаются в обратном порядке к направлению текста. column: элементы располагаются сверху вниз. column-reverse: элементы располагаются снизу вверх.====display: grid display: grid; // формирует сетку как блок.
+                display: inline-grid //формирует сетку как строчный блок.
+                display: subgrid //если ваш контейнер это ещё и элемент (вложенная сетка), то вы можете использовать это свойство для обозначения того, чтобы размеры строк/колонок были взяты из родительского элемента, а не определяли собственный. 
+
+                ==justify-items Выравнивает содержимое вдоль оси столбца (в отличии от justify-items который выравнивает элементы вдоль оси строки). Это значение применяется ко всем элементам сетки внутри контейнера. Наследуется: нет. Применяется ко: всем элементам. Значение по умолчанию: normal. start //выравнивание элементов по верхней части области.
+                end //выравнивание элементов по нижней части области.
+                center //выравнивание элементов по центру области.
+                stretch // заполняет всю высоту области (по умолчанию). 
+
+
+                justify-content=тень бокс шедоу box-shadow: box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+                тень внутри внутрь inset==миксины @mixin адаптив @mixin breakpoint ($point) {
+                    @if $point==xs {
+                        @media (min-width: 36em) {
+                            @content;
+                        }
+                    }
+
+                    @else if $point==sm {
+                        @media (min-width: 48em) {
+                            @content;
+                        }
+                    }
+
+                }
+
+                элемент:nth-child(odd | even | <число> | <выражение>) {
+                    ...
+                }
+
+                :nth-child(odd)even {
+                    ...
+                }
+
+                нечетные https: //github.com/flizerzet/flizerzet.github.io/tree/master/polyphonie_landing
+                ==Популярные макеты и шаблоны,
+                созданные с помощью CSS https: //csslayout.io/
+                ==http: //iloveadaptive.com/ru/
+                на разных экранах адаптив планшет==вебпак сборка ноде node.js webpack.js https: //webpack.js.org/guides/asset-modules/
+                ==A free visual guide to CSS свойства разные+++https: //cssreference.io/
+                ==10 вещей,
+                которые можно делать в верстке с помощью псевдоэлементов before и after https: //habr.com/ru/company/skillbox/blog/592643/
+                ==https: //webflow.com/design/create-basic-layouts-03bde6?t=1&b=0
+                webflow.com==транзи транси Вариации transition https: //codepen.io/nazarelen/pen/gbLXYK
+                Пример transition-delay https: //codepen.io/html5book/pen/wzKeoj
+                Пример transition-duration https: //codepen.io/html5book/pen/LRpLbZ?editors=1100
+                Пример transition-timing-function https: //codepen.io/nazarelen/pen/JobJNy
+
+
+                ==анимация anima Пример animation-timing-function https: //codepen.io/html5book/pen/xErJeg
+                Пример animation-direction https: //codepen.io/html5book/pen/GjpExx?editors=1100
+                Пример animation-delay https: //codepen.io/zerospree/pen/XWaGER?editors=1100
+                ==даня шаблон вс-код https: //www.youtube.com/watch?v=TayoyJ3KQSY
+                https: //www.youtube.com/watch?v=snVFd5MOkTM&feature=youtu.be
+
+                ==сравнение текста сравнить http: //text.num2word.ru/
+                ==шаблон галп gulp даня https: //github.com/flizerzet/flizer-gulp
+
+                https: //tilda.cc/ru/
+
+                https: //developers.themoviedb.org/3/getting-started/introduction
+                https: //developers.themoviedb.org/3/getting-started/introduction
+                https: //developers.themoviedb.org/3
+                Адрес для теста 'https://jsonplaceholder.typicode.com/todos/1'
+                ========расшифровать короткую ссылку https: //longurl.info/
+
+                js https: //doka.guide/js/
+                популярные названия классов: https: //tpverstak.ru/common-css-class-names/
+                анна сайт https: //tpverstak.ru/
+                задачи и решение http: //code.mu/ru/javascript/book/prime/
+
+                игры: лягушка https: //flexboxfroggy.com/#ru
+                гриды https: //cssgridgarden.com/#ru
+
+                Шпаргалка по Grid CSS грид grid https: //tpverstak.ru/grid/
+
+                Шпаргалка по Flexbox CSS флекс https: //tpverstak.ru/flex-cheatsheet/
+                https: //codepen.io/simolex/pen/yLPObMP
+
+                https: //den7466.github.io/MyPortfolio/
+
+                Видео про разницу Float,
+                Flexbox и Grid https: //www.youtube.com/watch?v=azQRYYdKt8I&feature=youtu.be
+
+                Популярные устройства и media https: //ruslanyusupov.com/blog/media-queries-breakpoints-in-2021
+                ===обо всем - очень нужное https: //devdocs.io/node~12_lts/
+
+                https: //github.com/Kadurmo/Module01-Burger
+                ===типо Фотошопа photoShop фото https: //www.photopea.com
+                ==Swiper свайпер слайдер https: //swiperjs.com/
+                Пример слайдера Swiper https: //codesandbox.io/s/vrng4?file=/index.html
+                ==маска js input ! ! ! https: //frontips.ru/kak-sdelat-masku-dlya-tekstovyh-polej-input/
+                ==ретина экраны https: //pixelplus.ru/studio/stat/optimizatsiya-saytov-retina/
+                ==проверка сайта http https: //bluetree.ai/screenfly/
+                ==калибровка экрана (если цвета отличаюстя) https: //zumer.com.ua/kalibrovka-monitora-noutbuka/
+                ==Плагин Autoprefixer https: //marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-autoprefixer
+
+                Валидатор HTML https: //validator.w3.org/#validate_by_uri
+
+                Валидатор CSS https: //jigsaw.w3.org/css-validator/#validate_by_input
+
+                Валидатор js валидация https: //tools.icoder.uz/javascript-validator.php
+                Сжатие картинок https: //tinypng.com/
+
+                Can I Use https: //caniuse.com/
+
+                Генерация фавиконок https: //realfavicongenerator.net/
+
+                Разметка для README https: //docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+
+                Нашел ответ на вопрос,
+                почему не работает плавное прокручивание в safari https: //developer.mozilla.org/ru/docs/Web/API/Element/scrollIntoView
+
+                предпроцессор css sass https: //sass-scss.ru/guide/
+
+                шаблоны надо для начала работы чекбокс модалка мобильное меню аккордион ховер на js слайдер==скрыть спрятать визи visibility: visible | hidden | collapse | inherit vccode вс код плагин eCSStractor for VScode еще модалка старая // попап окна
+                let popupBg=document.querySelector('.popup__bg'); // Фон попап окна
+                let popup=document.querySelector('.popup'); // Само окно
+                let openPopupButtons=document.querySelectorAll('.open-popup'); // Кнопки для показа окна
+                let closePopupButton=document.querySelector('.close-popup'); // Кнопка для скрытия окна
+
+                openPopupButtons.forEach((button)=> {
+
+                        // Перебираем все кнопки
+                        button.addEventListener('click', (e)=> {
+                                // Для каждой вешаем обработчик событий на клик
+                                e.preventDefault(); // Предотвращаем дефолтное поведение браузера
+                                popupBg.classList.add('active'); // Добавляем класс 'active' для фона
+                                popup.classList.add('active'); // И для самого окна
+                            }
+
+                        )
+                    }
+
+                );
+
+                closePopupButton.addEventListener('click', ()=> {
+                        // Вешаем обработчик на крестик
+                        popupBg.classList.remove('active'); // Убираем активный класс с фона
+                        popup.classList.remove('active'); // И с окна
+                    }
+
+                );
+
+                document.addEventListener('click', (e)=> {
+
+                        // Вешаем обработчик на весь документ
+                        if(e.target===popupBg) {
+                            // Если цель клика - фот, то:
+                            popupBg.classList.remove('active'); // Убираем активный класс с фона
+                            popup.classList.remove('active'); // И с окна
+                        }
+                    }
+
+                );
+
+                .navigation a:not(:last-child) {
+                    margin-right: 7.1rem;
+                  }
+
+
+                  .drop-checkbox {
+                    height: 1px;
+                    opacity: 0;}

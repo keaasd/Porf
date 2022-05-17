@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Custom dropdown. CSS + JS</title>
+		
+	</head>
+	<body>
+	<style>
+	* {
+	box-sizing: border-box;
+}
+
+.form-group-title {
+	font-style: 22px;
+	font-weight: 700;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.form-group + .form-group {
+	margin-top: 10px;
+}
+
+label {
+	cursor: pointer;
+}
+
+/* *******************
+Select
+******************* */
+
+.select {
+	width: 100%;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	border: 1px solid #7E9BBD;
+	border-radius: 6px;
+	background-color: #fff;
+	padding: 10px 35px 10px 15px;
+	outline: none;
+	cursor: pointer;
+}
+
+/* Убираем стрелочку в IE 10 и 11 */
+.select::-ms-expand {
+	display: none;
+}
+
+/* По клику - убираем обводку и добавляем свою*/
+.select:focus {
+	outline: none;
+	box-shadow: 0px 0px 0px 1px #38577a, 0px 0px 10px #7e9bbd;
+}
+
+/* Делаем .select-wrapper родительским элементом для позиционирования "стрелочки" */
+.select-wrapper {
+	position: relative;
+}
+
+/* Рисуем стрелочку */
+.select-wrapper::before {
+	content: "";
+
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	transform: translateY(-50%);
+
+	display: block;
+
+	/* Рисуем треугольник */
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10.4px 6px 0 6px;
+	border-color: #7e9bbd transparent transparent transparent;
+
+	/* Снимаем клик с треугольника */
+	pointer-events: none;
+}
+
+/* *******************
+Select c dropdown на JS
+******************* */
+
+.dropdown {
+	position: relative;
+}
+
+.dropdown__button {
+	position: relative;
+	display: block;
+	width: 100%;
+	text-align: left;
+
+	background: #FFFFFF;
+	border: 1px solid #7E9BBD;
+	border-radius: 6px;
+	height: 46px;
+
+	padding-top: 13px;
+	padding-bottom: 13px;
+	padding-left: 20px;
+	padding-right: 35px;
+
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+
+	cursor: pointer;
+}
+
+.dropdown__button:focus, .dropdown__button--active {
+	outline: none;
+	box-shadow: 0px 0px 0px 4px rgba(176, 198, 225, 0.6);
+}
+
+.dropdown__button::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	transform: translateY(-50%);
+	/* Рисуем треугольник */
+    width: 0;
+    height: 0;
+    border-width: 10.4px 6px 0 6px;
+    border-color: #79849B transparent transparent transparent;
+	border-style: solid;
+	/* Снимаем клик с треугольника */
+	pointer-events: none;
+}
+
+
+.dropdown__list {
+	display: none;
+
+	position: absolute;
+	left: 0;
+	top: 52px;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 8px rgba(176, 198, 225, 0.6);
+	overflow: hidden;
+	border-radius: 6px;
+	width: 100%;
+	z-index: 1;
+}
+
+.dropdown__list--visible {
+	display: block;
+}
+
+.dropdown__list-item {
+	margin: 0;
+	padding: 0;
+	border: 1px solid #7E9BBD;
+	border-bottom: 0px;
+	padding: 13px 20px;
+	cursor: pointer;
+}
+
+.dropdown__list-item:first-child {
+	border-radius: 6px 6px 0 0;
+}
+
+.dropdown__list-item:last-child {
+	border-radius: 0 0 6px 6px;
+	border-bottom: 1px solid #7E9BBD;
+}
+
+.dropdown__list-item:hover {
+	background: rgba(176, 198, 225, 0.26);
+}
+
+.dropdown__input-hidden {
+	display: none;
+}
+</style>
+        <h1>Select. Выпадающий список</h1>
+
+        <div class="form-group-title">
+            Выберите категорию:
+        </div>
+
+        <div class="form-group">
+            <div class="select-wrapper">
+                <select name="select-category" id="" class="select">
+                    <option value="1">Заметки путешественника</option>
+                    <option value="2">Конспекты по учебе</option>
+                    <option value="3">Фотоальбом</option>
+                    <option value="4">Дневник спортсмена</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="select-wrapper">
+                <select name="select-category" id="" class="select">
+                    <option value="1">Заметки путешественника</option>
+                    <option value="2">Конспекты по учебе</option>
+                    <option value="3">Фотоальбом</option>
+                    <option value="4">Дневник спортсмена</option>
+                </select>
+            </div>
+        </div>
+<!-- ===================   кастомный селекст =========================== -->
+        <div class="form-group">
+            <div class="dropdown">
+                <button class="dropdown__button">путешественника</button>
+                <ul class="dropdown__list">
+                    <li class="dropdown__list-item" data-value="travel">путешественника</li>
+                    <li class="dropdown__list-item" data-value="lessons">учебе</li>
+                    <li class="dropdown__list-item" data-value="photo">Фотоальбом</li>
+                    <li class="dropdown__list-item" data-value="sport">Дневник</li>
+                </ul>
+                <input type="text" name="select-category" value="" class="dropdown__input-hidden" >
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="dropdown">
+                <button class="dropdown__button">путешественника</button>
+                <ul class="dropdown__list">
+                    <li class="dropdown__list-item" data-value="travel">Заметки путешественника</li>
+                    <li class="dropdown__list-item" data-value="lessons">учебе</li>
+                    <li class="dropdown__list-item" data-value="photo">Фотоальбом</li>
+                    <li class="dropdown__list-item" data-value="sport">спортсмена</li>
+                </ul>
+                <input type="text" name="select-category" value="" class="dropdown__input-hidden" >
+            </div>
+        </div>
+
+
+
+<script>
+		// Полифилл для метода forEach для NodeList
+if (window.NodeList && !NodeList.prototype.forEach) {
+	NodeList.prototype.forEach = function (callback, thisArg) {
+		thisArg = thisArg || window;
+		for (var i = 0; i < this.length; i++) {
+			callback.call(thisArg, this[i], i, this);
+		}
+	};
+}
+
+document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
+	const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
+	const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
+	const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
+	const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
+
+	// Клик по кнопке. Открыть/Закрыть select
+	dropDownBtn.addEventListener('click', function (e) {
+		dropDownList.classList.toggle('dropdown__list--visible');
+        this.classList.add('dropdown__button--active');
+	});
+
+	// Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
+	dropDownListItems.forEach(function (listItem) {
+		listItem.addEventListener('click', function (e) {
+			e.stopPropagation();
+			dropDownBtn.innerText = this.innerText;
+			dropDownBtn.focus();
+			dropDownInput.value = this.dataset.value;
+			dropDownList.classList.remove('dropdown__list--visible');
+		});
+	});
+
+	// Клик снаружи дропдауна. Закрыть дропдаун
+	document.addEventListener('click', function (e) {
+		if (e.target !== dropDownBtn) {
+			dropDownBtn.classList.remove('dropdown__button--active');
+			dropDownList.classList.remove('dropdown__list--visible');
+		}
+	});
+
+	// Нажатие на Tab или Escape. Закрыть дропдаун
+	document.addEventListener('keydown', function (e) {
+		if (e.key === 'Tab' || e.key === 'Escape') {
+			dropDownBtn.classList.remove('dropdown__button--active');
+			dropDownList.classList.remove('dropdown__list--visible');
+		}
+	});
+});
+</script>
+
+	</body>
+</html>

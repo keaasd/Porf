@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    https://keaasd.github.io/MyPortfolioWork/dist/
+    @media (max-width: 
+
+    $r_minmob: 320px;
+$r_mob_360)        : 360px;
+$r_mob_400)        : 400px;
+$r_mob_500)        : 500px;
+567
+$r_mob_567: 567px;
+$r_tab)        : 768px;
+$r_tab_900)        : 900px;
+$r_desk)        : 1000px;
+$r_desk_hd)        : 1200px;
+$r_desk_1280)        : 1280px;
+$r_desk_1350)        : 1350px;
+$r_desk_1400:1400px;
+$r_desk_1040: 1040px;
+$r_desk_1200: 1200px;
+$r_desk_1170: 1170px;
+
+
+
+
+@media (max-width: $r_desk_full_1750) 
+@media (max-width: $r_desk_1400) 
+
+
+
+$r_desk_1400
+@media (max-width: $r_desk_1170) 1170
+@media (max-width: $r_desk_1120)
+@media (max-width: $r_mob_500) {}
+
+@media (max-width: $r_tab_900) {}
+
+
+@media (max-width: $r_desk_1360) {}        1360
+
+@media (max-width: $r_desk_hd) {}               1200
+
+@media (max-width: $r_desk) 1000                    1000
+
+@media (max-width: $r_desk_1040) {}                     1040
+                                                    <!-- ----------------- -->
+@media (max-width: $r_tab) {}                   768
+
+@media (max-width: $r_mob_567) {}           567
+
+@media (max-width: $r_mob_360) {}       360
+@media (max-width: $r_minmob) {}    320
+
+вебпак
+скопировать папку src, webpack config и package.json в проекте прописать npm i, потом npm run dev
+$r_mob_500: 500px;
+
+  --margin-l: 180px;
+  --margin-m: 80px;
+  --margin-s: 60px;
+font-size: var(--margin-l);
+
+
+$bla1: rgb(35, 35, 38); background: #232326;
+$bla2: rgb(20, 20, 22);
+
+$whi1: rgb(243, 242, 240);
+$whi1: rgb(196, 196, 196); 
+$gr1: rgb(55, 55, 55);
+
+
+
+form
+action="https://jsonplaceholder.typicode.com/posts" method="post"
+
+180px           var(--margin-l);
+80px            var(--margin-m);
+60px            var(--margin-s);
+:root {
+    --text-size-mini: 3rem;
+    --margin: 180px;
+  }
+
+  flex: 0 0 50%;
+  фон
+&::after {
+    content: "";
+    background-image: url('../images/arrow1.svg');
+    width: 16px;
+    height: 12px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-left: 12px;
+    display: block;  
+    }
+стили
+.select {
+	margin: 0 auto;
+	position: relative;
+	width: 250px;
+}
+.select.is-active .select__body {
+	display: block;}
+
+.select__header {
+	border: 1px solid #ccc;
+	cursor: pointer;
+	display: flex;
+}
+.select__current {
+	font-size: 18px;
+	line-height: 24px;
+	padding: 8px;
+}
+.select__icon {
+	align-items: center;
+	display: flex;
+	flex-shrink: 0;
+	justify-content: center;
+	height: 40px;
+	margin-left: auto;
+	text-align: center;
+	width: 40px;
+}
+
+.select__body {
+	border: 1px solid #cccccc;
+	border-top: 0;
+	display: none;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 100%;
+}
+.select__item {
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 8px;
+}
+
+.select__item:hover {
+	background-color: #f2f2f2;
+}
+выплывашки подсказка
+https://www.w3schools.com/css/css_tooltip.asp
+
+
+макет дипломки портфолио модуль 2 
+эээээ
+https://www.youtube.com/watch?v=H-UPHVjunOs
+https://codepen.io/leon9208/pen/jOEBJgW
+https://codepen.io/leon9208/pen/VwYpJwW
+
+2== https://www.youtube.com/watch?v=WrP-kdozbqk
+
+от Юлии https://www.youtube.com/watch?v=JLm_bt9NwjM&feature=youtu.be без кнопочки
+    <select name="" id="">
+        <option value="1">1</option>
+        <option value="2">2</option>
+    </select>
+    
+    <div class="select is-active">
+        <div class="select__header">
+            <span class="select__current">Value 1</span>
+            <div class="select__icon">&times;</div>
+        </div>
+    
+        <div class="select__body">
+            <div class="select__item">Value 1</div>
+            <div class="select__item">Value 2</div>
+            <div class="select__item">Value 3</div>
+            <div class="select__item">Value 4</div>
+            <div class="select__item">Value 5</div>
+        </div>
+    </div>
+<script>
+    let select = function () {
+    let selectHeader = document.querySelectorAll('.select__header');
+    let selectItem = document.querySelectorAll('.select__item');
+
+    selectHeader.forEach(item => {
+        item.addEventListener('click', selectToggle)
+    });
+
+    selectItem.forEach(item => {
+        item.addEventListener('click', selectChoose)
+    });
+
+    function selectToggle() {
+        this.parentElement.classList.toggle('is-active');
+    }
+
+    function selectChoose() {
+        let text = this.innerText,
+            select = this.closest('.select'),
+            currentText = select.querySelector('.select__current');
+        currentText.innerText = text;
+        select.classList.remove('is-active');
+
+    }
+
+};
+
+
+select();
+
+
+</script>
+<pre>
+    // absolute выровнять по центру абсолют
+    &.fix-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: $white-g;
+        // background-color: red;
+        padding-left: 20px;
+        padding-right: 20px;
+        // max-width: 1140px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        z-index: 5;
+        top:50%;
+    left:50%;
+    transform:translate(-50%, 0); 
+      }
+      transition: .3s linear;
+</pre>
+https://keaasd.github.io/MyPortfolioWork/dist/
+https://keaasd.github.io/MyPortfolioWork/dist/
+https://Kaduromo.github.io/Portfolio/dist
+
+https://web-standards.ru/articles/native-and-custom-select/
+кастомный селект
+
+https://github.com/Kaduromo/Portfolio/tree/main/dist
+
+
+
+// let gi = window.addEventListener('scroll', function(evt) {
+    //   const wind = window.scrollY;
+    //   console.log(wind);
+    //   let wind2 = window.scrollY;
+    //   if (wind > wind2) {
+    //     console.log('больше: ');
+    //   }
+    // });
+    
+    //  let up = window.scrollY;
+        // console.log('up: ', up);
+    
+      // if(window.scrollY < 0) {
+       
+      //   header.classList.add('fix-header')
+      //   page.style.marginTop = header.clientHeight + 'px';
+      // } else {
+      //   header.classList.remove('fix-header')
+      //     page.style.marginTop = 0;
+      //   }
+     
+
+</body>
+</html>
